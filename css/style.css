@@ -1,0 +1,2136 @@
+/*-----If you glance through my code, you might see that designed my site desktop-first, rather than mobile-first.
+For my site, which I assumed would most likely be viewed on a work computer, I felt this approach would be better.
+I recognize the importance of mobile-first responsive design in most other cases.-----*/
+
+a {
+        text-decoration: none;
+        color: #222222;
+}
+
+body {
+        background-color: #f8f8f9;
+        margin: 0;
+}
+
+footer {
+        background-color: #222222;
+        margin-top: 40px;
+}
+
+footer li {
+        display: inline-block;
+        margin-right: 16px;
+}
+
+footer object {
+        width: 31px;
+        height: 35px;
+}
+
+footer ul {
+        list-style: none;
+        margin-top: 0;
+        margin-bottom: 0;
+}
+
+footer #call-to-action {
+        color: #939598;
+        font-family: NeueHaasGroteskDisp-Bold;
+        font-size: 24px;
+        margin-top: 0;
+        margin-bottom: 0;
+}
+
+footer #email {
+        color: #1afaf2;
+        font-family: Bodoni-Italic;
+        font-size: 18px;
+        margin-top: 0;
+        margin-bottom: 0;
+}
+
+html, body {
+        height: 100%;
+}
+
+img {
+        display: block;
+}
+
+img[alt="Grossology Movie Poster"] {
+        box-sizing: border-box;
+        padding-left: 15px;
+        padding-right: 15px;
+}
+
+img[alt="What's keeping construction crews on the quad this year?"] {
+        box-sizing: border-box;
+        padding-left: 15px;
+        padding-right: 15px;
+}
+
+nav {
+        /*background-color: rgba(248, 248, 249, 0.90);*//*-----For reverting from a transparency gradient background to a solid background-----*/
+                background: rgba(248, 248, 249, 0.90); /* For browsers that do not support gradients */
+                background: -webkit-linear-gradient(rgba(248, 248, 249, 0.9), rgba(248, 248, 249, 1));/* For Safari 5.1 to 6.0 */
+                background: -o-linear-gradient(rgba(248, 248, 249, 0.9), rgba(248, 248, 249, 1));/* For Opera 11.1 to 12.0 */
+                background: -moz-linear-gradient(rrgba(248, 248, 249, 0.9), rgba(248, 248, 249, 1));/* For Firefox 3.6 to 15 */
+                background: linear-gradient(rrgba(248, 248, 249, 0.9), rgba(248, 248, 249, 1));/* Standard syntax */
+        border-bottom: 1px solid rgba(240, 240, 241, 0.90);
+        color: #222222;
+        height: 80px;
+        position: fixed;
+        top: 40px;
+        width: 100%;
+        z-index: 2;
+}
+
+ul {
+        padding: 0;
+}
+
+/*-------------------------------------------------------PSEUDO CLASSES AND ID's-------------------------------------------------------*/
+
+@-webkit-keyframes bernie-posters-cfFadeInOut {
+        0% {opacity:1;} 22.2222% {opacity:1;} 25% {opacity:0;} 97.2222% {opacity:0;} 100% {opacity:1;}
+}
+
+@-moz-keyframes bernie-posters-cfFadeInOut {
+        0% {opacity:1;} 22.2222% {opacity:1;} 25% {opacity:0;} 97.2222% {opacity:0;} 100% {opacity:1;}
+}
+
+@-o-keyframes bernie-posters-cfFadeInOut {
+        0% {opacity:1;} 22.2222% {opacity:1;} 25% {opacity:0;} 97.2222% {opacity:0;} 100% {opacity:1;}
+}
+
+@keyframes bernie-posters-cfFadeInOut {
+        0% {opacity:1;} 22.2222% {opacity:1;} 25% {opacity:0;} 97.2222% {opacity:0;} 100% {opacity:1;}
+}
+
+#bernie-posters-cf {
+        position: relative;
+        max-width: 555px;
+        padding-left: 15px;
+        padding-right: 15px;
+}
+
+#bernie-posters-cf-wrapper {
+        position: relative;
+        max-width: 525px;
+        border-bottom: 1px solid rgba(240, 240, 241, 0.90);
+}
+
+#bernie-posters-cf-wrapper > img {
+        position: absolute;
+        left: 0;
+        max-width: 100%;
+        /*-----Browser compatibility for CSS transition-----*/
+                -webkit-animation-name: bernie-posters-cfFadeInOut; -webkit-animation-timing-function: ease-in-out;
+                -webkit-animation-iteration-count: infinite; -webkit-animation-duration: 18s;
+                
+                -moz-animation-name: bernie-posters-cfFadeInOut; -moz-animation-timing-function: ease-in-out;
+                -moz-animation-iteration-count: infinite; -moz-animation-duration: 18s;
+                
+                -o-animation-name: bernie-posters-cfFadeInOut; -o-animation-timing-function: ease-in-out;
+                -o-animation-iteration-count: infinite; -o-animation-duration: 18s;
+                
+                animation-name: bernie-posters-cfFadeInOut; animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite; animation-duration: 18s;
+}
+
+#bernie-posters-cf-stabilize {
+        position: relative;
+        max-width: 525px;
+}
+
+#bernie-posters-cf-stabilize img {
+        max-width: 100%;
+}
+
+#bernie-posters-cf img:nth-of-type(1) {
+        -webkit-animation-delay: 13.5s; -moz-animation-delay: 13.5s; -o-animation-delay: 13.5s; animation-delay: 13.5s;
+}
+
+#bernie-posters-cf img:nth-of-type(2) {
+        -webkit-animation-delay: 9s; -moz-animation-delay: 9s; -o-animation-delay: 9s; animation-delay: 9s;
+}
+
+#bernie-posters-cf img:nth-of-type(3) {
+        -webkit-animation-delay: 4.5s; -moz-animation-delay: 4.5s; -o-animation-delay: 4.5s; animation-delay: 4.5s;
+}
+
+#bernie-posters-cf img:nth-of-type(4) {
+        -webkit-animation-delay: 0s; -moz-animation-delay: 0s; -o-animation-delay: 0s; animation-delay: 0s;
+}
+
+.border-box {
+        box-sizing: border-box;
+        padding-right: 15px;
+        padding-left: 15px;
+}
+
+#construction {
+        background: repeating-linear-gradient(
+                45deg,
+                #222222,
+                #222222 10px,
+                #2b2b2b 10px,
+                #2b2b2b 20px
+        );
+        height: 40px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+}
+
+#construction p {
+        color: #1afaf2;
+        font-family: NeueHaasGroteskDisp-Bold;
+        font-size: 16px;
+        line-height: 40px;
+        letter-spacing: 1px;
+        margin: 0;
+        text-align: center;
+}
+
+.container {
+        overflow:hidden;
+}
+
+.content {
+        margin-top: 140px;
+}
+
+.content-portfolio {
+        margin-top: 60px;
+        margin-right: auto;
+        margin-bottom: 0;
+        margin-left: auto;
+        max-width: 1170px;
+}
+
+/*.description-container-absolute {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%,-50%);
+}*/
+
+.description-title {
+        color: #222222;
+        font-family: NeueHaasGroteskDisp-Bold;
+        font-size: 20px;
+        letter-spacing: 1px;
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 10px;
+}
+
+.description-desc {
+        color: #58595b;
+        font-family: Bodoni-Roman;
+        font-size: 16px;
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 10px;
+}
+
+
+.dividing-line {
+        display: block;
+        margin-right: auto;
+        margin-bottom: 40px;
+        margin-left: auto;
+}
+
+.dividing-line-desc {
+        display: block;
+        margin-top: 20px;
+        margin-right: auto;
+}
+
+#dividing-line-post-brief {
+        margin-bottom: 200px;
+}
+
+#footer-wrapper {
+        margin: 0 auto;
+        width: 1170px;
+}
+
+#footer-wrapper ul {
+        padding-left: 15px;
+}
+
+#footer-wrapper ul li {
+        display: inline-block;
+        vertical-align: middle;
+}
+
+#header-amazon {
+        background: url("../img/background-amazon-2048x480.png") #1afaf2 no-repeat top left fixed;
+        background-size: 2048px;
+        height: 480px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+}
+
+#header-csfb {
+        background: url("../img/background-csfb-2048x480.jpg") #1afaf2 no-repeat top center fixed;
+        background-size: 2048px;
+        height: 480px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+}
+
+#header-dth {
+        background: url("../img/background-steam-vents-2048x480.png") #1afaf2 no-repeat top center fixed;
+        background-size: 2048px;
+        height: 480px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+}
+
+#header-grossology {
+        background: url("../img/background-grossology-2048x480.png") #1afaf2 no-repeat top center fixed;
+        background-size: 2048px;
+        height: 480px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+}
+
+#header-raising-the-score {
+        background: url("../img/background-raising-the-score-2048x480.png") #1afaf2 no-repeat top center fixed;
+        background-size: 2048px;
+        height: 480px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+}
+
+#header-seuss {
+        background: url("../img/background-seuss-book-2048x480-alt.png") #1afaf2 no-repeat top center fixed;
+        background-size: 2048px;
+        height: 480px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+}
+
+.iframe-container {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+        border-bottom: 1px solid rgba(240, 240, 241, 0.90);
+}
+
+.iframe-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+}
+
+.iframe-wrapper {
+        max-width: 585px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 40px;
+}
+
+.img-scale {
+        height: auto;
+        max-width: 100%;
+}
+
+#img-debatenight2-match {
+        position: relative;
+        /*height: 687px;*/
+}
+
+#img-fightfor15-match {
+        position: relative;
+        /*height: 801px;*/.
+}
+
+#img-rainbow-button-match {
+        position: relative;
+        /*height: 554px;*/
+}
+
+#img-raising-the-score-icon-match {
+        position: relative;
+        /*height: 589px;*/
+}
+
+#img-tabasco-sauce-match {
+        position: relative;
+        /*height: 697px;*/
+}
+
+.italicize {
+        font-family: Bodoni-Italic;
+}
+
+#logo-bump {
+        margin-bottom: 200px;
+}
+
+.margin-auto{
+        margin-right: auto;
+        margin-left: auto;
+}
+
+.nav-bar-left {
+        float:left;
+}
+
+.nav-bar-left li {
+        display: inline-block; /* gives list horizontal orientation */
+}
+
+.nav-bar-left li:nth-child(1) { /* targeting LOGO*/
+        margin-top: 10px;
+        height: 60px;
+        width: 51.962px;
+}
+
+.nav-bar-left li:nth-child(2) { /* targeting NAME TITLE*/
+        margin-left: 15px;
+}
+
+.nav-bar-left #name-title {
+        /*content:url("../img/name-title-371x31.png");*//*-----For reverting back to PNG name titles-----*/
+                content:url("../img/name-title-danulylock.svg");
+        margin-bottom: 12px; /*necessary to vertically center NAME TITLE. Can't alter position of containing <li>*/
+        width: 371px;
+        height: 31px;
+}
+
+.nav-bar-left ul {
+        list-style: none;
+        margin-top: 0;
+        margin-right: auto;
+        margin-bottom: 0;
+        margin-left: auto;
+        padding-left: 15px;
+}
+
+.nav-bar-right {
+        float:right;
+}
+
+.nav-bar-right li {
+        display: inline-block; /* gives list horizontal orientation */
+        font-family: NeueHaasGroteskDisp-Bold;
+        font-size: 14px;
+        letter-spacing: 1px;
+}
+
+.nav-bar-right li:nth-child(1) { /* targeting CV*/
+        display: none;
+}
+
+.nav-bar-right li:nth-child(3) { /* targeting RESUME*/
+        margin-left: 40px;
+}
+
+.nav-bar-right ul {
+        line-height: 80px;
+        list-style: none;
+        margin-top: 0;
+        margin-right: auto;
+        margin-bottom: 0;
+        margin-left: auto;
+        padding-right: 15px;
+}
+
+#nav-wrapper {
+        height: 100%;
+        max-width: 1170px;
+        margin: 0 auto;
+}
+
+.project-brief {
+        color: #58595b;
+        font-family: Bodoni-Roman;
+        font-size: 20px;
+        line-height: 150%;
+        text-align: left;
+        margin-bottom: 40px;
+        padding-left: 15px;
+        padding-right: 15px;
+}
+
+.project-desc {
+        color: #58595b;
+        font-family: Bodoni-Roman;
+        font-size: 14px;
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 10px;
+}
+
+.project-title {
+        font-family: NeueHaasGroteskDisp-Bold;
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 2px;
+}
+
+#project-title {
+        color: #222222;
+        font-family: Bodoni-BoldItalic;
+        font-size: 60px;
+        text-align: center;
+        margin-bottom: 40px;
+        padding-left: 15px;
+        padding-right: 15px;
+}
+
+@-webkit-keyframes t-shirts-cfFadeInOut {
+        0% {opacity:1;} 26.6667% {opacity:1;} 33.3333% {opacity:0;} 93.3333% {opacity:0;} 100% {opacity:1;}
+}
+
+@-moz-keyframes t-shirts-cfFadeInOut {
+        0% {opacity:1;} 26.6667% {opacity:1;} 33.3333% {opacity:0;} 93.3333% {opacity:0;} 100% {opacity:1;}
+}
+
+@-o-keyframes t-shirts-cfFadeInOut {
+        0% {opacity:1;} 26.6667% {opacity:1;} 33.3333% {opacity:0;} 93.3333% {opacity:0;} 100% {opacity:1;}
+}
+
+@keyframes t-shirts-cfFadeInOut {
+        0% {opacity:1;} 26.6667% {opacity:1;} 33.3333% {opacity:0;} 93.3333% {opacity:0;} 100% {opacity:1;}
+}
+
+#t-shirts-cf {
+        position: relative;
+        max-width: 555px;
+        padding-left: 15px;
+        padding-right: 15px;
+}
+
+#t-shirts-cf-padding-fix {
+        position: relative;
+}
+
+#t-shirts-cf-padding-fix > img {
+        position: absolute;
+        left: 0;
+        max-width: 100%;
+        /*-----Browser compatibility for CSS transition-----*/
+                -webkit-animation-name: t-shirts-cfFadeInOut; -webkit-animation-timing-function: ease-in-out;
+                -webkit-animation-iteration-count: infinite; -webkit-animation-duration: 7.5s;
+                
+                -moz-animation-name: t-shirts-cfFadeInOut; -moz-animation-timing-function: ease-in-out;
+                -moz-animation-iteration-count: infinite; -moz-animation-duration: 7.5s;
+                
+                -o-animation-name: t-shirts-cfFadeInOut; -o-animation-timing-function: ease-in-out;
+                -o-animation-iteration-count: infinite; -o-animation-duration: 7.5s;
+                
+                animation-name: t-shirts-cfFadeInOut; animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite; animation-duration: 7.5s;
+}
+
+#t-shirts-cf img:nth-of-type(1) {
+        -webkit-animation-delay: 5s; -moz-animation-delay: 5s; -o-animation-delay: 5s; animation-delay: 5s;
+}
+
+#t-shirts-cf img:nth-of-type(2) {
+        -webkit-animation-delay: 2.5s; -moz-animation-delay: 2.5s; -o-animation-delay: 2.5s; animation-delay: 2.5s;
+}
+
+#t-shirts-cf img:nth-of-type(3) {
+        -webkit-animation-delay: 0s; -moz-animation-delay: 0s; -o-animation-delay: 0s; animation-delay: 0s;
+}
+
+#t-shirts-cf-stabilize {
+        position: relative;
+        max-width: 555px;
+}
+
+#t-shirts-cf-stabilize img {
+        max-width: 100%;
+}
+
+.window {
+        margin-left: auto;
+        margin-right: auto;
+        max-height: 360px;
+        max-width: 360px;
+        padding: 10px 15px 30px 15px;
+}
+
+/*-------------------------------------------------------MEDIA QUERIES [GENERAL]-------------------------------------------------------*/
+
+@media (max-width: 1169px) { 
+        .nav-bar-left #name-title {
+                /*content:url("../img/name-title-371x31.png");*//*-----For reverting back to PNG name titles-----*/
+                        content:url("../img/name-title-danulylock.svg");
+                margin-bottom: 12px; /*necessary to vertically center NAME TITLE. Can't alter position of containing <li>*/
+                width: 371px;
+                height: 31px;
+        }
+}
+
+@media (max-width: 839px) { 
+        .nav-bar-left #name-title {
+                /*content:url("../img/name-title-262x31.png");*//*-----For reverting back to PNG name titles-----*/
+                        content:url("../img/name-title-danlock.svg");
+                margin-bottom: 12px; /*necessary to vertically center NAME TITLE. Can't alter position of containing <li>*/
+                width: 262px;
+                height: 31px;
+        }
+}
+
+@media (max-width: 779px) { /*-----SMALL-----*/
+        #dividing-line-post-brief {
+                margin-bottom: 120px;
+        }
+        
+        #logo-bump {
+                box-sizing: border-box;
+                margin-bottom: 120px;
+                padding-right: 15px;
+                padding-left: 15px;
+        }
+}
+
+@media (max-width: 690px) {
+        .content-portfolio {
+                margin-top: 40px;
+        }
+        footer li {
+                margin-right: 12px;
+        }
+        footer li:nth-child(4) img {
+                height: calc(120px * .75);
+        }
+        footer #call-to-action {
+                font-size: 20px;
+        }
+        footer #email {
+                font-size: 16px;
+        }
+        footer object {
+                width: calc(31px * .75);
+                height: calc(35px * .75);
+        }
+        nav {
+                height: 60px;
+        }
+        .nav-bar-left #name-title {
+                /*content:url("../img/name-title-150x31.png");*//*-----For reverting back to PNG name titles-----*/
+                        content:url("../img/name-title-danlock.svg");
+                margin-bottom: 7px; /*necessary to vertically center NAME TITLE. Can't alter position of containing <li>*/
+                width: calc(262px * .75);
+                height: calc(31px * .75);
+        }
+        .nav-bar-left li:nth-child(1) { /* targeting LOGO*/
+                margin-top: 7.5px;
+                height: calc(60px * .75);
+                width: calc(51.962px * .75);
+        }
+        .nav-bar-right ul {
+                line-height: 60px;
+        }
+        .project-brief {
+                font-size: 16px;
+        }
+        #project-title {
+                font-size: 40px;
+                padding-left: 15px;
+                padding-right: 15px;
+        }
+}
+
+@media (max-width: 629px) { 
+        .nav-bar-left #name-title {
+                /*content:url("../img/name-title-150x31.png");*//*-----For reverting back to PNG name titles-----*/
+                        content:url("../img/name-title-lock.svg");
+                margin-bottom: 7px; /*necessary to vertically center NAME TITLE. Can't alter position of containing <li>*/
+                width: calc(150px * .75);
+                height: calc(31px * .75);
+        }
+}
+
+@media (max-width: 539px) {
+        .nav-bar-left #name-title {
+                /*content:url("../img/name-title-85x31.png");*//*-----For reverting back to PNG name titles-----*/
+                        content:url("../img/name-title-dul.svg");
+                margin-bottom: 7px; /*necessary to vertically center NAME TITLE. Can't alter position of containing <li>*/
+                width: calc(85px * .75);
+                height: calc(31px * .75);
+        }
+        #project-title {
+                font-size: 40px;
+                padding-left: 15px;
+                padding-right: 15px;
+        }
+}
+
+@media (max-width: 429px) {
+        footer #call-to-action {
+                font-size: 18px;
+        }
+        footer #email {
+                font-size: 14px;
+        }
+        .nav-bar-left #name-title {
+                /*content:url("../img/name-title-85x31.png");*//*-----For reverting back to PNG name titles-----*/
+                        content:url("../img/name-title-dul.svg");
+                margin-bottom: 7px; /*necessary to vertically center NAME TITLE. Can't alter position of containing <li>*/
+                width: calc(85px * .75);
+                height: calc(31px * .75);
+                
+        }
+        .nav-bar-right li:nth-child(1) { /* targeting CV*/
+                display: inline-block;
+        }
+        .nav-bar-right li:nth-child(2) { /* targeting CV*/
+                margin-left: 24px;
+        }
+        .nav-bar-right li:nth-child(3) { /* targeting RESUME*/
+                display: none;
+        }
+}
+
+/*-------------------------------------------------------MEDIA QUERIES [BACKGROUND IMAGES]-------------------------------------------------------*/
+
+/*-----LARGER MOBILE-----*/
+@media (min-height: 481px) and (max-height: 700px) {/*-----1x-----*/
+        /*---------------amazonair.html---------------*/
+                #header-amazon {
+                        background: url("../img/background-amazon-portrait-480x700.jpg") #1afaf2 no-repeat top center fixed;
+                        background-size: 480px;
+                        height: 700px;
+                        width: 100%;
+                        margin: 0;
+                        padding: 0;
+                        z-index: -10;
+                }
+                @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {/*-----2x-----*/
+                        #header-amazon {
+                                background: url("../img/background-amazon-portrait-960x1400.jpg") #1afaf2 no-repeat top center fixed;
+                                background-size: 480px;
+                                height: 700px;
+                                z-index: -10;
+                        }
+                }
+                @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {/*-----3x-----*/
+                        #header-amazon {
+                                background: url("../img/background-amazon-portrait-1440x2100.jpg") #1afaf2 no-repeat top center fixed;
+                                background-size: 480px;
+                                height: 700px;
+                                z-index: -10;
+                        }
+                }
+                @media (-webkit-min-device-pixel-ratio: 3.5), (min-resolution: 336dpi) {/*-----3.5x-----*/
+                        #header-amazon {
+                                background: url("../img/background-amazon-portrait-1680x2450.jpg") #1afaf2 no-repeat top center fixed;
+                                background-size: 480px;
+                                height: 700px;
+                                z-index: -10;
+                        }
+                }
+        /*---------------csfb.html---------------*/
+                #header-csfb {
+                        background: url("../img/background-csfb-portrait-480x700.jpg") #1afaf2 no-repeat top center fixed;
+                        background-size: 480px;
+                        height: 700px;
+                        width: 100%;
+                        margin: 0;
+                        padding: 0;
+                        z-index: -10;
+                }
+                @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {/*-----2x-----*/
+                        #header-csfb {
+                                background: url("../img/background-csfb-portrait-960x1400.jpg") #1afaf2 no-repeat top center fixed;
+                                background-size: 480px;
+                                height: 700px;
+                                z-index: -10;
+                        }
+                }
+                @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {/*-----3x-----*/
+                        #header-csfb {
+                                background: url("../img/background-csfb-portrait-1440x2100.jpg") #1afaf2 no-repeat top center fixed;
+                                background-size: 480px;
+                                height: 700px;
+                                z-index: -10;
+                        }
+                }
+                @media (-webkit-min-device-pixel-ratio: 3.5), (min-resolution: 336dpi) {/*-----3.5x-----*/
+                        #header-csfb {
+                                background: url("../img/background-csfb-portrait-1680x2450.jpg") #1afaf2 no-repeat top center fixed;
+                                background-size: 480px;
+                                height: 700px;
+                                z-index: -10;
+                        }
+                }
+        /*---------------dth.html---------------*/
+                #header-dth {
+                        background: url("../img/background-test-480x700.png") #1afaf2 no-repeat top center fixed;
+                        background-size: 480px;
+                        height: 700px;
+                        width: 100%;
+                        margin: 0;
+                        padding: 0;
+                        z-index: -10;
+                }
+                @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {/*-----2x-----*/
+                        #header-dth {
+                                background: url("../img/background-test-960x1400.png") #1afaf2 no-repeat top center fixed;
+                                background-size: 480px;
+                                height: 700px;
+                                z-index: -10;
+                        }
+                }
+                @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {/*-----3x-----*/
+                        #header-dth {
+                                background: url("../img/background-test-1440x2100.png") #1afaf2 no-repeat top center fixed;
+                                background-size: 480px;
+                                height: 700px;
+                                z-index: -10;
+                        }
+                }
+                @media (-webkit-min-device-pixel-ratio: 3.5), (min-resolution: 336dpi) {/*-----3.5x-----*/
+                        #header-dth {
+                                background: url("../img/background-test-1680x2450.png") #1afaf2 no-repeat top center fixed;
+                                background-size: 480px;
+                                height: 700px;
+                                z-index: -10;
+                        }
+                }
+        /*---------------grossology.html---------------*/
+                #header-grossology {
+                        background: url("../img/background-test-landscape-700x480.png") #1afaf2 no-repeat top center fixed;
+                        background-size: 480px;
+                        height: 700px;
+                        width: 100%;
+                        margin: 0;
+                        padding: 0;
+                        z-index: -10;
+                }
+                @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {/*-----2x-----*/
+                        #header-grossology {
+                                background: url("../img/background-test-landscape-1400x960.png") #1afaf2 no-repeat top center fixed;
+                                background-size: 480px;
+                                height: 700px;
+                                z-index: -10;
+                        }
+                }
+                @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {/*-----3x-----*/
+                        #header-grossology {
+                                background: url("../img/background-test-landscape-2100x1440.png") #1afaf2 no-repeat top center fixed;
+                                background-size: 480px;
+                                height: 700px;
+                                z-index: -10;
+                        }
+                }
+                @media (-webkit-min-device-pixel-ratio: 3.5), (min-resolution: 336dpi) {/*-----3.5x-----*/
+                        #header-grossology {
+                                background: url("../img/background-test-landscape-2450x1680.png") #1afaf2 no-repeat top center fixed;
+                                background-size: 480px;
+                                height: 700px;
+                                z-index: -10;
+                        }
+                }
+        /*---------------raising-the-score.html---------------*/
+                #header-raising-the-score {
+                        background: url("../img/background-raising-the-score-portrait-480x700.jpg") #1afaf2 no-repeat top center fixed;
+                        background-size: 480px;
+                        height: 700px;
+                        width: 100%;
+                        margin: 0;
+                        padding: 0;
+                        z-index: -10;
+                }
+                @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {/*-----2x-----*/
+                        #header-raising-the-score {
+                                background: url("../img/background-raising-the-score-portrait-960x1400.jpg") #1afaf2 no-repeat top center fixed;
+                                background-size: 480px;
+                                height: 700px;
+                                z-index: -10;
+                        }
+                }
+                @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {/*-----3x-----*/
+                        #header-raising-the-score {
+                                background: url("../img/background-raising-the-score-portrait-1440x2100.jpg") #1afaf2 no-repeat top center fixed;
+                                background-size: 480px;
+                                height: 700px;
+                                z-index: -10;
+                        }
+                }
+                @media (-webkit-min-device-pixel-ratio: 3.5), (min-resolution: 336dpi) {/*-----3.5x-----*/
+                        #header-raising-the-score {
+                                background: url("../img/background-raising-the-score-portrait-1680x2450.jpg") #1afaf2 no-repeat top center fixed;
+                                background-size: 480px;
+                                height: 700px;
+                                z-index: -10;
+                        }
+                }
+        /*---------------redstatebluestate.html---------------*/
+                #header-seuss {
+                        background: url("../img/background-seuss-portrait-480x700.jpg") #1afaf2 no-repeat top center fixed;
+                        background-size: 480px;
+                        height: 700px;
+                        width: 100%;
+                        margin: 0;
+                        padding: 0;
+                        z-index: -10;
+                }
+                @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {/*-----2x-----*/
+                        #header-seuss {
+                                background: url("../img/background-seuss-portrait-960x1400.jpg") #1afaf2 no-repeat top center fixed;
+                                background-size: 480px;
+                                height: 700px;
+                                z-index: -10;
+                        }
+                }
+                @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {/*-----3x-----*/
+                        #header-seuss {
+                                background: url("../img/background-seuss-portrait-1440x2100.jpg") #1afaf2 no-repeat top center fixed;
+                                background-size: 480px;
+                                height: 700px;
+                                z-index: -10;
+                        }
+                }
+                @media (-webkit-min-device-pixel-ratio: 3.5), (min-resolution: 336dpi) {/*-----3.5x-----*/
+                        #header-seuss {
+                                background: url("../img/background-seuss-portrait-1680x2450.jpg") #1afaf2 no-repeat top center fixed;
+                                background-size: 480px;
+                                height: 700px;
+                                z-index: -10;
+                        }
+                }
+}
+
+/*-----SMALLER MOBILE-----*/
+@media (max-height: 480px) {/*-----1x-----*/
+        /*---------------amazonair.html---------------*/
+                #header-amazon {
+                        background: url("../img/background-amazon-landscape-700x480.jpg") #1afaf2 no-repeat top center fixed;
+                        background-size: 700px;
+                        height: 480px;
+                        width: 100%;
+                        margin: 0;
+                        padding: 0;
+                        z-index: -10;
+                }
+                @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {/*-----2x-----*/
+                        #header-amazon {
+                                background: url("../img/background-amazon-landscape-1400x960.jpg") #1afaf2 no-repeat top center fixed;
+                                background-size: 700px;
+                                height: 480px;
+                                z-index: -10;
+                        }
+                }
+                @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {/*-----3x-----*/
+                        #header-amazon {
+                                background: url("../img/background-amazon-landscape-2100x1440.jpg") #1afaf2 no-repeat top center fixed;
+                                background-size: 700px;
+                                height: 480px;
+                                z-index: -10;
+                        }
+                }
+                @media (-webkit-min-device-pixel-ratio: 3.5), (min-resolution: 336dpi) {/*-----3.5x-----*/
+                        #header-amazon {
+                                background: url("../img/background-amazon-landscape-2450x1680.jpg") #1afaf2 no-repeat top center fixed;
+                                background-size: 700px;
+                                height: 480px;
+                                z-index: -10;
+                        }
+                }
+        /*---------------csfb.html---------------*/
+                #header-csfb {
+                        background: url("../img/background-csfb-landscape-700x480.jpg") #1afaf2 no-repeat top center fixed;
+                        background-size: 700px;
+                        height: 480px;
+                        width: 100%;
+                        margin: 0;
+                        padding: 0;
+                        z-index: -10;
+                }
+                @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {/*-----2x-----*/
+                        #header-csfb {
+                                background: url("../img/background-csfb-landscape-1400x960.jpg") #1afaf2 no-repeat top center fixed;
+                                background-size: 700px;
+                                height: 480px;
+                                z-index: -10;
+                        }
+                }
+                @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {/*-----3x-----*/
+                        #header-csfb {
+                                background: url("../img/background-csfb-landscape-2100x1440.jpg") #1afaf2 no-repeat top center fixed;
+                                background-size: 700px;
+                                height: 480px;
+                                z-index: -10;
+                        }
+                }
+                @media (-webkit-min-device-pixel-ratio: 3.5), (min-resolution: 336dpi) {/*-----3.5x-----*/
+                        #header-csfb {
+                                background: url("../img/background-csfb-landscape-2450x1680.jpg") #1afaf2 no-repeat top center fixed;
+                                background-size: 700px;
+                                height: 480px;
+                                z-index: -10;
+                        }
+                }
+        /*---------------dth.html---------------*/
+                #header-dth {
+                       background: url("../img/background-test-landscape-700x480.png") #1afaf2 no-repeat top center fixed;
+                       background-size: 700px;
+                       height: 480px;
+                       width: 100%;
+                       margin: 0;
+                       padding: 0;
+                       z-index: -10;
+                }       
+                @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {/*-----2x-----*/
+                        #header-dth {
+                                background: url("../img/background-test-landscape-1400x960.png") #1afaf2 no-repeat top center fixed;
+                                background-size: 700px;
+                                height: 480px;
+                                z-index: -10;
+                        }
+                }
+                @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {/*-----3x-----*/
+                        #header-dth {
+                                background: url("../img/background-test-landscape-2100x1440.png") #1afaf2 no-repeat top center fixed;
+                                background-size: 700px;
+                                height: 480px;
+                                z-index: -10;
+                        }
+                }
+                @media (-webkit-min-device-pixel-ratio: 3.5), (min-resolution: 336dpi) {/*-----3.5x-----*/
+                        #header-dth {
+                                background: url("../img/background-test-landscape-2450x1680.png") #1afaf2 no-repeat top center fixed;
+                                background-size: 700px;
+                                height: 480px;
+                                z-index: -10;
+                        }
+                }
+        /*---------------grossology.html---------------*/
+                #header-grossology {
+                        background: url("../img/background-test-landscape-700x480.png") #1afaf2 no-repeat top center fixed;
+                        background-size: 700px;
+                        height: 480px;
+                        width: 100%;
+                        margin: 0;
+                        padding: 0;
+                        z-index: -10;
+                }
+                @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {/*-----2x-----*/
+                        #header-grossology {
+                                background: url("../img/background-test-landscape-1400x960.png") #1afaf2 no-repeat top center fixed;
+                                background-size: 700px;
+                                height: 480px;
+                                z-index: -10;
+                        }
+                }
+                @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {/*-----3x-----*/
+                        #header-grossology {
+                                background: url("../img/background-test-landscape-2100x1440.png") #1afaf2 no-repeat top center fixed;
+                                background-size: 700px;
+                                height: 480px;
+                                z-index: -10;
+                        }
+                }
+                @media (-webkit-min-device-pixel-ratio: 3.5), (min-resolution: 336dpi) {/*-----3.5x-----*/
+                        #header-grossology {
+                                background: url("../img/background-test-landscape-2450x1680.png") #1afaf2 no-repeat top center fixed;
+                                background-size: 700px;
+                                height: 480px;
+                                z-index: -10;
+                        }
+                }
+        /*---------------raising-the-score.html---------------*/
+                #header-raising-the-score {
+                        background: url("../img/background-raising-the-score-landscape-700x480.jpg") #1afaf2 no-repeat top center fixed;
+                        background-size: 700px;
+                        height: 480px;
+                        width: 100%;
+                        margin: 0;
+                        padding: 0;
+                        z-index: -10;
+                }
+                @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {/*-----2x-----*/
+                        #header-raising-the-score {
+                                background: url("../img/background-raising-the-score-landscape-1400x960.jpg") #1afaf2 no-repeat top center fixed;
+                                background-size: 700px;
+                                height: 480px;
+                                z-index: -10;
+                        }
+                }
+                @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {/*-----3x-----*/
+                        #header-raising-the-score {
+                                background: url("../img/background-raising-the-score-landscape-2100x1440.jpg") #1afaf2 no-repeat top center fixed;
+                                background-size: 700px;
+                                height: 480px;
+                                z-index: -10;
+                        }
+                }
+                @media (-webkit-min-device-pixel-ratio: 3.5), (min-resolution: 336dpi) {/*-----3.5x-----*/
+                        #header-raising-the-score {
+                                background: url("../img/background-raising-the-score-landscape-2450x1680.jpg") #1afaf2 no-repeat top center fixed;
+                                background-size: 700px;
+                                height: 480px;
+                                z-index: -10;
+                        }
+                }
+        /*---------------redstatebluestate.html---------------*/
+                #header-seuss {
+                        background: url("../img/background-seuss-landscape-700x480.jpg") #1afaf2 no-repeat top center fixed;
+                        background-size: 700px;
+                        height: 480px;
+                        width: 100%;
+                        margin: 0;
+                        padding: 0;
+                        z-index: -10;
+                }
+                @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {/*-----2x-----*/
+                        #header-seuss {
+                                background: url("../img/background-seuss-landscape-1400x960.jpg") #1afaf2 no-repeat top center fixed;
+                                background-size: 700px;
+                                height: 480px;
+                                z-index: -10;
+                        }
+                }
+                @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {/*-----3x-----*/
+                        #header-seuss {
+                                background: url("../img/background-seuss-landscape-2100x1440.jpg") #1afaf2 no-repeat top center fixed;
+                                background-size: 700px;
+                                height: 480px;
+                                z-index: -10;
+                        }
+                }
+                @media (-webkit-min-device-pixel-ratio: 3.5), (min-resolution: 336dpi) {/*-----3.5x-----*/
+                        #header-seuss {
+                                background: url("../img/background-seuss-landscape-2450x1680.jpg") #1afaf2 no-repeat top center fixed;
+                                background-size: 700px;
+                                height: 480px;
+                                z-index: -10;
+                        }
+                }
+
+}
+
+/*-------------------------------------------------------FONT LINKS-------------------------------------------------------*/
+
+@font-face {
+    font-family: NeueHaasGroteskDisp-Bold;
+    src: url(../fonts/NeueHaasGroteskDisp-Bold.TTF);
+}
+
+@font-face {
+    font-family: Bodoni-BoldItalic;
+    src: url(../fonts/Bodoni-BoldItalic.otf);
+}
+
+@font-face {
+    font-family: Bodoni-Roman;
+    src: url(../fonts/Bodoni-Roman.otf);
+}
+
+@font-face {
+    font-family: Bodoni-Italic;
+    src: url(../fonts/Bodoni-Italic.otf);
+}
+
+/*-------------------------------------------------------FOUNDATION CLASS INFRASTRUCTURE-------------------------------------------------------*/
+
+.row {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 1170px; }
+  .row:before, .row:after {
+    content: " ";
+    display: table; }
+  .row:after {
+    clear: both; }
+  .row.collapse > .column,
+  .row.collapse > .columns {
+    padding-left: 0;
+    padding-right: 0; }
+  .row.collapse .row {
+    margin-left: 0;
+    margin-right: 0; }
+  .row .row {
+    width: auto;
+    margin-left: -0.9375rem;
+    margin-right: -0.9375rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: none; }
+    .row .row:before, .row .row:after {
+      content: " ";
+      display: table; }
+    .row .row:after {
+      clear: both; }
+    .row .row.collapse {
+      width: auto;
+      margin: 0;
+      max-width: none; }
+      .row .row.collapse:before, .row .row.collapse:after {
+        content: " ";
+        display: table; }
+      .row .row.collapse:after {
+        clear: both; }
+
+.column,
+.columns {
+  padding-left: 0; /*originally 0.9375rem*/
+  padding-right: 0; /*originally 0.9375rem*/
+  width: 100%;
+  float: left; }
+
+[class*="column"] + [class*="column"]:last-child {
+  float: right; }
+
+[class*="column"] + [class*="column"].end {
+  float: left; }
+
+@media {
+  .large-push-0 {
+    position: relative;
+    left: 0%;
+    right: auto; }
+
+  .large-pull-0 {
+    position: relative;
+    right: 0%;
+    left: auto; }
+
+  .large-push-1 {
+    position: relative;
+    left: 8.33333%;
+    right: auto; }
+
+  .large-pull-1 {
+    position: relative;
+    right: 8.33333%;
+    left: auto; }
+
+  .large-push-2 {
+    position: relative;
+    left: 16.66667%;
+    right: auto; }
+
+  .large-pull-2 {
+    position: relative;
+    right: 16.66667%;
+    left: auto; }
+
+  .large-push-3 {
+    position: relative;
+    left: 25%;
+    right: auto; }
+
+  .large-pull-3 {
+    position: relative;
+    right: 25%;
+    left: auto; }
+
+  .large-push-4 {
+    position: relative;
+    left: 33.33333%;
+    right: auto; }
+
+  .large-pull-4 {
+    position: relative;
+    right: 33.33333%;
+    left: auto; }
+
+  .large-push-5 {
+    position: relative;
+    left: 41.66667%;
+    right: auto; }
+
+  .large-pull-5 {
+    position: relative;
+    right: 41.66667%;
+    left: auto; }
+
+  .large-push-6 {
+    position: relative;
+    left: 50%;
+    right: auto; }
+
+  .large-pull-6 {
+    position: relative;
+    right: 50%;
+    left: auto; }
+
+  .large-push-7 {
+    position: relative;
+    left: 58.33333%;
+    right: auto; }
+
+  .large-pull-7 {
+    position: relative;
+    right: 58.33333%;
+    left: auto; }
+
+  .large-push-8 {
+    position: relative;
+    left: 66.66667%;
+    right: auto; }
+
+  .large-pull-8 {
+    position: relative;
+    right: 66.66667%;
+    left: auto; }
+
+  .large-push-9 {
+    position: relative;
+    left: 75%;
+    right: auto; }
+
+  .large-pull-9 {
+    position: relative;
+    right: 75%;
+    left: auto; }
+
+  .large-push-10 {
+    position: relative;
+    left: 83.33333%;
+    right: auto; }
+
+  .large-pull-10 {
+    position: relative;
+    right: 83.33333%;
+    left: auto; }
+
+  .large-push-11 {
+    position: relative;
+    left: 91.66667%;
+    right: auto; }
+
+  .large-pull-11 {
+    position: relative;
+    right: 91.66667%;
+    left: auto; }
+
+  .column,
+  .columns {
+    position: relative;
+    padding-left: 0; /*originally 0.9375rem*/
+    padding-right: 0; /*originally 0.9375rem*/
+    float: left; }
+
+  .large-1 {
+    width: 8.33333%; }
+
+  .large-2 {
+    width: 16.66667%; }
+
+  .large-3 {
+    width: 25%; }
+
+  .large-4 {
+    width: 33.33333%; }
+
+  .large-5 {
+    width: 41.66667%; }
+
+  .large-6 {
+    width: 50%; }
+
+  .large-7 {
+    width: 58.33333%; }
+
+  .large-8 {
+    width: 66.66667%; }
+
+  .large-9 {
+    width: 75%; }
+
+  .large-10 {
+    width: 83.33333%; }
+
+  .large-11 {
+    width: 91.66667%; }
+
+  .large-12 {
+    width: 100%; }
+
+  .large-offset-0 {
+    margin-left: 0% !important; }
+
+  .large-offset-1 {
+    margin-left: 8.33333% !important; }
+
+  .large-offset-2 {
+    margin-left: 16.66667% !important; }
+
+  .large-offset-3 {
+    margin-left: 25% !important; }
+
+  .large-offset-4 {
+    margin-left: 33.33333% !important; }
+
+  .large-offset-5 {
+    margin-left: 41.66667% !important; }
+
+  .large-offset-6 {
+    margin-left: 50% !important; }
+
+  .large-offset-7 {
+    margin-left: 58.33333% !important; }
+
+  .large-offset-8 {
+    margin-left: 66.66667% !important; }
+
+  .large-offset-9 {
+    margin-left: 75% !important; }
+
+  .large-offset-10 {
+    margin-left: 83.33333% !important; }
+
+  .large-offset-11 {
+    margin-left: 91.66667% !important; }
+
+  .large-reset-order {
+    margin-left: 0;
+    margin-right: 0;
+    left: auto;
+    right: auto;
+    float: left; }
+
+  .column.large-centered,
+  .columns.large-centered {
+    margin-left: auto;
+    margin-right: auto;
+    float: none; }
+
+  .column.large-uncentered,
+  .columns.large-uncentered {
+    margin-left: 0;
+    margin-right: 0;
+    float: left; }
+
+  .column.large-centered:last-child,
+  .columns.large-centered:last-child {
+    float: none; }
+
+  .column.large-uncentered:last-child,
+  .columns.large-uncentered:last-child {
+    float: left; }
+
+  .column.large-uncentered.opposite,
+  .columns.large-uncentered.opposite {
+    float: right; }
+
+  .push-0 {
+    position: relative;
+    left: 0%;
+    right: auto; }
+
+  .pull-0 {
+    position: relative;
+    right: 0%;
+    left: auto; }
+
+  .push-1 {
+    position: relative;
+    left: 8.33333%;
+    right: auto; }
+
+  .pull-1 {
+    position: relative;
+    right: 8.33333%;
+    left: auto; }
+
+  .push-2 {
+    position: relative;
+    left: 16.66667%;
+    right: auto; }
+
+  .pull-2 {
+    position: relative;
+    right: 16.66667%;
+    left: auto; }
+
+  .push-3 {
+    position: relative;
+    left: 25%;
+    right: auto; }
+
+  .pull-3 {
+    position: relative;
+    right: 25%;
+    left: auto; }
+
+  .push-4 {
+    position: relative;
+    left: 33.33333%;
+    right: auto; }
+
+  .pull-4 {
+    position: relative;
+    right: 33.33333%;
+    left: auto; }
+
+  .push-5 {
+    position: relative;
+    left: 41.66667%;
+    right: auto; }
+
+  .pull-5 {
+    position: relative;
+    right: 41.66667%;
+    left: auto; }
+
+  .push-6 {
+    position: relative;
+    left: 50%;
+    right: auto; }
+
+  .pull-6 {
+    position: relative;
+    right: 50%;
+    left: auto; }
+
+  .push-7 {
+    position: relative;
+    left: 58.33333%;
+    right: auto; }
+
+  .pull-7 {
+    position: relative;
+    right: 58.33333%;
+    left: auto; }
+
+  .push-8 {
+    position: relative;
+    left: 66.66667%;
+    right: auto; }
+
+  .pull-8 {
+    position: relative;
+    right: 66.66667%;
+    left: auto; }
+
+  .push-9 {
+    position: relative;
+    left: 75%;
+    right: auto; }
+
+  .pull-9 {
+    position: relative;
+    right: 75%;
+    left: auto; }
+
+  .push-10 {
+    position: relative;
+    left: 83.33333%;
+    right: auto; }
+
+  .pull-10 {
+    position: relative;
+    right: 83.33333%;
+    left: auto; }
+
+  .push-11 {
+    position: relative;
+    left: 91.66667%;
+    right: auto; }
+
+  .pull-11 {
+    position: relative;
+    right: 91.66667%;
+    left: auto; } }
+    
+
+@media (max-width: 1169px) {
+  .medium-push-0 {
+    position: relative;
+    left: 0%;
+    right: auto; }
+
+  .medium-pull-0 {
+    position: relative;
+    right: 0%;
+    left: auto; }
+
+  .medium-push-1 {
+    position: relative;
+    left: 8.33333%;
+    right: auto; }
+
+  .medium-pull-1 {
+    position: relative;
+    right: 8.33333%;
+    left: auto; }
+
+  .medium-push-2 {
+    position: relative;
+    left: 16.66667%;
+    right: auto; }
+
+  .medium-pull-2 {
+    position: relative;
+    right: 16.66667%;
+    left: auto; }
+
+  .medium-push-3 {
+    position: relative;
+    left: 25%;
+    right: auto; }
+
+  .medium-pull-3 {
+    position: relative;
+    right: 25%;
+    left: auto; }
+
+  .medium-push-4 {
+    position: relative;
+    left: 33.33333%;
+    right: auto; }
+
+  .medium-pull-4 {
+    position: relative;
+    right: 33.33333%;
+    left: auto; }
+
+  .medium-push-5 {
+    position: relative;
+    left: 41.66667%;
+    right: auto; }
+
+  .medium-pull-5 {
+    position: relative;
+    right: 41.66667%;
+    left: auto; }
+
+  .medium-push-6 {
+    position: relative;
+    left: 50%;
+    right: auto; }
+
+  .medium-pull-6 {
+    position: relative;
+    right: 50%;
+    left: auto; }
+
+  .medium-push-7 {
+    position: relative;
+    left: 58.33333%;
+    right: auto; }
+
+  .medium-pull-7 {
+    position: relative;
+    right: 58.33333%;
+    left: auto; }
+
+  .medium-push-8 {
+    position: relative;
+    left: 66.66667%;
+    right: auto; }
+
+  .medium-pull-8 {
+    position: relative;
+    right: 66.66667%;
+    left: auto; }
+
+  .medium-push-9 {
+    position: relative;
+    left: 75%;
+    right: auto; }
+
+  .medium-pull-9 {
+    position: relative;
+    right: 75%;
+    left: auto; }
+
+  .medium-push-10 {
+    position: relative;
+    left: 83.33333%;
+    right: auto; }
+
+  .medium-pull-10 {
+    position: relative;
+    right: 83.33333%;
+    left: auto; }
+
+  .medium-push-11 {
+    position: relative;
+    left: 91.66667%;
+    right: auto; }
+
+  .medium-pull-11 {
+    position: relative;
+    right: 91.66667%;
+    left: auto; }
+
+  .column,
+  .columns {
+    position: relative;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    float: left; }
+
+  .medium-1 {
+    width: 8.33333%; }
+
+  .medium-2 {
+    width: 16.66667%; }
+
+  .medium-3 {
+    width: 25%; }
+
+  .medium-4 {
+    width: 33.33333%; }
+
+  .medium-5 {
+    width: 41.66667%; }
+
+  .medium-6 {
+    width: 50%; }
+
+  .medium-7 {
+    width: 58.33333%; }
+
+  .medium-8 {
+    width: 66.66667%; }
+
+  .medium-9 {
+    width: 75%; }
+
+  .medium-10 {
+    width: 83.33333%; }
+
+  .medium-11 {
+    width: 91.66667%; }
+
+  .medium-12 {
+    width: 100%; }
+
+  .medium-offset-0 {
+    margin-left: 0% !important; }
+
+  .medium-offset-1 {
+    margin-left: 8.33333% !important; }
+
+  .medium-offset-2 {
+    margin-left: 16.66667% !important; }
+
+  .medium-offset-3 {
+    margin-left: 25% !important; }
+
+  .medium-offset-4 {
+    margin-left: 33.33333% !important; }
+
+  .medium-offset-5 {
+    margin-left: 41.66667% !important; }
+
+  .medium-offset-6 {
+    margin-left: 50% !important; }
+
+  .medium-offset-7 {
+    margin-left: 58.33333% !important; }
+
+  .medium-offset-8 {
+    margin-left: 66.66667% !important; }
+
+  .medium-offset-9 {
+    margin-left: 75% !important; }
+
+  .medium-offset-10 {
+    margin-left: 83.33333% !important; }
+
+  .medium-offset-11 {
+    margin-left: 91.66667% !important; }
+
+  .medium-reset-order {
+    margin-left: 0;
+    margin-right: 0;
+    left: auto;
+    right: auto;
+    float: left; }
+
+  .column.medium-centered,
+  .columns.medium-centered {
+    margin-left: auto;
+    margin-right: auto;
+    float: none; }
+
+  .column.medium-uncentered,
+  .columns.medium-uncentered {
+    margin-left: 0;
+    margin-right: 0;
+    float: left; }
+
+  .column.medium-centered:last-child,
+  .columns.medium-centered:last-child {
+    float: none; }
+
+  .column.medium-uncentered:last-child,
+  .columns.medium-uncentered:last-child {
+    float: left; }
+
+  .column.medium-uncentered.opposite,
+  .columns.medium-uncentered.opposite {
+    float: right; }
+
+  .push-0 {
+    position: relative;
+    left: 0%;
+    right: auto; }
+
+  .pull-0 {
+    position: relative;
+    right: 0%;
+    left: auto; }
+
+  .push-1 {
+    position: relative;
+    left: 8.33333%;
+    right: auto; }
+
+  .pull-1 {
+    position: relative;
+    right: 8.33333%;
+    left: auto; }
+
+  .push-2 {
+    position: relative;
+    left: 16.66667%;
+    right: auto; }
+
+  .pull-2 {
+    position: relative;
+    right: 16.66667%;
+    left: auto; }
+
+  .push-3 {
+    position: relative;
+    left: 25%;
+    right: auto; }
+
+  .pull-3 {
+    position: relative;
+    right: 25%;
+    left: auto; }
+
+  .push-4 {
+    position: relative;
+    left: 33.33333%;
+    right: auto; }
+
+  .pull-4 {
+    position: relative;
+    right: 33.33333%;
+    left: auto; }
+
+  .push-5 {
+    position: relative;
+    left: 41.66667%;
+    right: auto; }
+
+  .pull-5 {
+    position: relative;
+    right: 41.66667%;
+    left: auto; }
+
+  .push-6 {
+    position: relative;
+    left: 50%;
+    right: auto; }
+
+  .pull-6 {
+    position: relative;
+    right: 50%;
+    left: auto; }
+
+  .push-7 {
+    position: relative;
+    left: 58.33333%;
+    right: auto; }
+
+  .pull-7 {
+    position: relative;
+    right: 58.33333%;
+    left: auto; }
+
+  .push-8 {
+    position: relative;
+    left: 66.66667%;
+    right: auto; }
+
+  .pull-8 {
+    position: relative;
+    right: 66.66667%;
+    left: auto; }
+
+  .push-9 {
+    position: relative;
+    left: 75%;
+    right: auto; }
+
+  .pull-9 {
+    position: relative;
+    right: 75%;
+    left: auto; }
+
+  .push-10 {
+    position: relative;
+    left: 83.33333%;
+    right: auto; }
+
+  .pull-10 {
+    position: relative;
+    right: 83.33333%;
+    left: auto; }
+
+  .push-11 {
+    position: relative;
+    left: 91.66667%;
+    right: auto; }
+
+  .pull-11 {
+    position: relative;
+    right: 91.66667%;
+    left: auto; } }
+
+@media (max-width: 779px) {
+  .small-push-0 {
+    position: relative;
+    left: 0%;
+    right: auto; }
+
+  .small-pull-0 {
+    position: relative;
+    right: 0%;
+    left: auto; }
+
+  .small-push-1 {
+    position: relative;
+    left: 8.33333%;
+    right: auto; }
+
+  .small-pull-1 {
+    position: relative;
+    right: 8.33333%;
+    left: auto; }
+
+  .small-push-2 {
+    position: relative;
+    left: 16.66667%;
+    right: auto; }
+
+  .small-pull-2 {
+    position: relative;
+    right: 16.66667%;
+    left: auto; }
+
+  .small-push-3 {
+    position: relative;
+    left: 25%;
+    right: auto; }
+
+  .small-pull-3 {
+    position: relative;
+    right: 25%;
+    left: auto; }
+
+  .small-push-4 {
+    position: relative;
+    left: 33.33333%;
+    right: auto; }
+
+  .small-pull-4 {
+    position: relative;
+    right: 33.33333%;
+    left: auto; }
+
+  .small-push-5 {
+    position: relative;
+    left: 41.66667%;
+    right: auto; }
+
+  .small-pull-5 {
+    position: relative;
+    right: 41.66667%;
+    left: auto; }
+
+  .small-push-6 {
+    position: relative;
+    left: 50%;
+    right: auto; }
+
+  .small-pull-6 {
+    position: relative;
+    right: 50%;
+    left: auto; }
+
+  .small-push-7 {
+    position: relative;
+    left: 58.33333%;
+    right: auto; }
+
+  .small-pull-7 {
+    position: relative;
+    right: 58.33333%;
+    left: auto; }
+
+  .small-push-8 {
+    position: relative;
+    left: 66.66667%;
+    right: auto; }
+
+  .small-pull-8 {
+    position: relative;
+    right: 66.66667%;
+    left: auto; }
+
+  .small-push-9 {
+    position: relative;
+    left: 75%;
+    right: auto; }
+
+  .small-pull-9 {
+    position: relative;
+    right: 75%;
+    left: auto; }
+
+  .small-push-10 {
+    position: relative;
+    left: 83.33333%;
+    right: auto; }
+
+  .small-pull-10 {
+    position: relative;
+    right: 83.33333%;
+    left: auto; }
+
+  .small-push-11 {
+    position: relative;
+    left: 91.66667%;
+    right: auto; }
+
+  .small-pull-11 {
+    position: relative;
+    right: 91.66667%;
+    left: auto; }
+
+  .column,
+  .columns {
+    position: relative;
+    padding-left: 0;
+    padding-right:0;
+    float: left; }
+
+  .small-1 {
+    width: 8.33333%; }
+
+  .small-2 {
+    width: 16.66667%; }
+
+  .small-3 {
+    width: 25%; }
+
+  .small-4 {
+    width: 33.33333%; }
+
+  .small-5 {
+    width: 41.66667%; }
+
+  .small-6 {
+    width: 50%; }
+
+  .small-7 {
+    width: 58.33333%; }
+
+  .small-8 {
+    width: 66.66667%; }
+
+  .small-9 {
+    width: 75%; }
+
+  .small-10 {
+    width: 83.33333%; }
+
+  .small-11 {
+    width: 91.66667%; }
+
+  .small-12 {
+    width: 100%; }
+
+  .small-offset-0 {
+    margin-left: 0% !important; }
+
+  .small-offset-1 {
+    margin-left: 8.33333% !important; }
+
+  .small-offset-2 {
+    margin-left: 16.66667% !important; }
+
+  .small-offset-3 {
+    margin-left: 25% !important; }
+
+  .small-offset-4 {
+    margin-left: 33.33333% !important; }
+
+  .small-offset-5 {
+    margin-left: 41.66667% !important; }
+
+  .small-offset-6 {
+    margin-left: 50% !important; }
+
+  .small-offset-7 {
+    margin-left: 58.33333% !important; }
+
+  .small-offset-8 {
+    margin-left: 66.66667% !important; }
+
+  .small-offset-9 {
+    margin-left: 75% !important; }
+
+  .small-offset-10 {
+    margin-left: 83.33333% !important; }
+
+  .small-offset-11 {
+    margin-left: 91.66667% !important; }
+
+  .small-reset-order {
+    margin-left: 0;
+    margin-right: 0;
+    left: auto;
+    right: auto;
+    float: left; }
+
+  .column.small-centered,
+  .columns.small-centered {
+    margin-left: auto;
+    margin-right: auto;
+    float: none; }
+
+  .column.small-uncentered,
+  .columns.small-uncentered {
+    margin-left: 0;
+    margin-right: 0;
+    float: left; }
+
+  .column.small-centered:last-child,
+  .columns.small-centered:last-child {
+    float: none; }
+
+  .column.small-uncentered:last-child,
+  .columns.small-uncentered:last-child {
+    float: left; }
+
+  .column.small-uncentered.opposite,
+  .columns.small-uncentered.opposite {
+    float: right; } }
