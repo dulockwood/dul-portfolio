@@ -110,8 +110,7 @@ ul {
 #bernie-posters-cf {
         position: relative;
         max-width: 555px;
-        padding-left: 15px;
-        padding-right: 15px;
+        margin-right: 0;
 }
 
 #bernie-posters-cf-wrapper {
@@ -210,12 +209,6 @@ ul {
         max-width: 1170px;
 }
 
-/*.description-container-absolute {
-        position: absolute;
-        top: 50%; left: 50%;
-        transform: translate(-50%,-50%);
-}*/
-
 .description-title {
         color: #222222;
         font-family: NeueHaasGroteskDisp-Bold;
@@ -252,6 +245,32 @@ ul {
 #dividing-line-post-brief {
         margin-bottom: 200px;
 }
+
+.flex-child {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+}
+
+.flex-parent {
+        display: flex;
+        flex-direction: row;
+        min-height: 100%;
+}
+
+.flex-row {
+        display: flex;
+}
+.flex-column {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 45px;
+        padding-right: 45px;
+}
+
 
 #footer-wrapper {
         margin: 0 auto;
@@ -349,31 +368,6 @@ ul {
         max-width: 100%;
 }
 
-#img-debatenight2-match {
-        position: relative;
-        /*height: 687px;*/
-}
-
-#img-fightfor15-match {
-        position: relative;
-        /*height: 801px;*/.
-}
-
-#img-rainbow-button-match {
-        position: relative;
-        /*height: 554px;*/
-}
-
-#img-raising-the-score-icon-match {
-        position: relative;
-        /*height: 589px;*/
-}
-
-#img-tabasco-sauce-match {
-        position: relative;
-        /*height: 697px;*/
-}
-
 .italicize {
         font-family: Bodoni-Italic;
 }
@@ -462,8 +456,11 @@ ul {
         font-family: Bodoni-Roman;
         font-size: 20px;
         line-height: 150%;
+        max-width: 850px;
         text-align: left;
         margin-bottom: 40px;
+        margin-left: auto;
+        margin-right: auto;
         padding-left: 15px;
         padding-right: 15px;
 }
@@ -580,6 +577,19 @@ ul {
                 width: 371px;
                 height: 31px;
         }
+        .flex-column {
+                padding-left: 45px;
+                padding-right: 45px;
+        }
+        #bernie-posters-cf {
+                padding-left: 15px;
+                padding-right: 15px;
+                margin: 0 auto;
+        }
+        .img-wrapper {
+                padding-left: 15px;
+                padding-right: 15px;
+        }
 }
 
 @media (max-width: 839px) { 
@@ -590,13 +600,23 @@ ul {
                 width: 262px;
                 height: 31px;
         }
+        .flex-column {
+                padding-left: 15px;
+                padding-right: 15px;
+        }
 }
 
 @media (max-width: 779px) { /*-----SMALL-----*/
         #dividing-line-post-brief {
                 margin-bottom: 120px;
+        }        
+        .flex-row {
+                display: initial;
         }
-        
+        .flex-column {
+                padding-left: 15px;
+                padding-right: 15px;
+        }
         #logo-bump {
                 box-sizing: border-box;
                 margin-bottom: 120px;
