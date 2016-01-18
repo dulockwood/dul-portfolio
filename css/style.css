@@ -392,6 +392,10 @@ ul {
         margin-top: 80px;
 }
 
+#my-beautiful-face {
+        max-width: 80%;
+}
+
 .nav-bar-left {
         float:left;
 }
@@ -669,6 +673,9 @@ ul {
         }
         .columns {
                 margin-top: 40px;
+        }
+        #my-beautiful-face {
+                max-width: 100%;
         }
         .svg-logo-wrapper {
                 padding-left: 30px;
