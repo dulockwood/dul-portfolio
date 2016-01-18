@@ -80,7 +80,7 @@ nav {
         color: #222222;
         height: 80px;
         position: fixed;
-        top: 40px;
+        top: 0; /*--Revert to 40px when bringing back the "SITE UNDER CONSTRUCTION" sign--*/
         width: 100%;
         z-index: 2;
 }
@@ -198,7 +198,7 @@ ul {
 }
 
 .content {
-        margin-top: 140px;
+        margin-top: 120px; /*--Revert to 140px when including "SITE UNDER CONSTRUCTION" sign--*/
 }
 
 .content-portfolio {
@@ -247,6 +247,25 @@ ul {
         margin-bottom: 200px;
 }
 
+.external-link {
+        color: #58595b;
+        margin-bottom: 80px;
+        text-align: center;
+        font-family: Bodoni-Italic;
+        font-size: 32px;
+}
+
+.feature-img {
+        border-bottom: 1px solid rgba(240, 240, 241, 0.90);
+}
+
+.feature-img-wrapper {
+        margin-top: 80px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+}
+
 .flex-row {
         display: flex;
 }
@@ -259,7 +278,6 @@ ul {
         padding-left: 45px;
         padding-right: 45px;
 }
-
 
 #footer-wrapper {
         margin: 0 auto;
@@ -346,10 +364,10 @@ ul {
 }
 
 .iframe-wrapper {
-        max-width: 585px;
+        max-width: 850px;
         padding-left: 15px;
         padding-right: 15px;
-        margin-bottom: 40px;
+        margin-bottom: 80px;
 }
 
 .img-scale {
@@ -368,6 +386,10 @@ ul {
 .margin-auto{
         margin-right: auto;
         margin-left: auto;
+}
+
+#mayi-logo {
+        margin-top: 80px;
 }
 
 .nav-bar-left {
@@ -463,6 +485,13 @@ ul {
         margin-bottom: 10px;
 }
 
+.project-subhead {
+        font-family: NeueHaasGroteskDisp-Bold;
+        font-size: 20px;
+        letter-spacing: 1px;
+        text-align: center;
+}
+
 .project-title {
         font-family: NeueHaasGroteskDisp-Bold;
         font-size: 14px;
@@ -482,8 +511,12 @@ ul {
         padding-right: 15px;
 }
 
-.row.flex-row {
+#raising-the-score-logo {
         margin-top: 40px;
+}
+
+.row.flex-row {
+        margin-top: 120px;
 }
 
 @-webkit-keyframes t-shirts-cfFadeInOut {
@@ -585,6 +618,13 @@ ul {
         }
 }
 
+@media (max-width: 879px) {
+        .feature-img-wrapper {
+                padding-left: 15px;
+                padding-right: 15px;
+        }
+}
+
 @media (max-width: 839px) { 
         .nav-bar-left #name-title {
                 /*content:url("../img/name-title-262x31.png");*//*-----For reverting back to PNG name titles-----*/
@@ -630,9 +670,16 @@ ul {
         .columns {
                 margin-top: 40px;
         }
+        .svg-logo-wrapper {
+                padding-left: 30px;
+                padding-right: 30px;
+        }
 }
 
 @media (max-width: 690px) {
+        .content {
+                margin-top: 80px;
+        }
         .content-portfolio {
                 margin-top: 40px;
         }

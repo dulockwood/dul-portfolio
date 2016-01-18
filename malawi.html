@@ -32,9 +32,7 @@
   </head>
   <body>
     <div class="container">
-      <div id="construction">
-        <p>SITE UNDER CONSTRUCTION</p>
-      </div>
+      <!--<div id="construction"><p>SITE UNDER CONSTRUCTION</p></div>-->
       <nav>
         <div id="nav-wrapper">
         <a href="/"><div class="nav-bar-left">
@@ -46,7 +44,7 @@
         <div class="nav-bar-right">
           <ul>
             <li><a href="lockwood-daniel-ulysses-resume.pdf" target="_blank">CV</a></li>
-            <li><a href="#">ABOUT</a></li>
+            <li><a href="about.html">ABOUT</a></li>
             <li><a href="lockwood-daniel-ulysses-resume.pdf" target="_blank">RESUME</a></li>
           </ul>
         </div><!--end ".nav-bar-right"-->
@@ -90,42 +88,44 @@
           </div><!--end ".columns"-->
           </div><!--end ".row"-->
           <img class="dividing-line" src="img/line-80x1.png">
-        <div class="row"><!----------MAYI LOGO ROW---------->
-        <div class="small-12 medium-6 large-6 columns">
-            <img class="img-scale margin-auto border-box" src="img/mayi-logo-555x554.png" alt="Previous logo"><!-----ADD PADDING ONLY AT SMALL SIZE----->
+        <div id="mayi-logo" class="row flex-row"><!----------MAYI LOGO ROW---------->
+        <div class="small-12 medium-6 large-6 columns flex-column">
+            <div class="svg-logo-wrapper">
+                <object class="img-scale margin-auto border-box" type="image/svg+xml" data="img/mayi-logo.svg">Your browser does not support SVG</object><!-----ADD PADDING ONLY AT SMALL SIZE----->
+            </div>
           </div><!--end ".columns"-->
-          <div class="small-12 medium-6 large-6 columns">
-            <div id="img-rainbow-button-match" class="margin-auto">
-              <div class="description-container-absolute">
+          <div class="small-12 medium-6 large-6 columns flex-row">
+              <div class="flex-column">
                 <p class="description-title">What Would Have Been</p>
                 <p class="description-desc">This was the project's original name and wordmark until two weeks before the deadline. "MAYI" means "mother" in Chichewa, the native tongue of Malawians. The silhouette depicts a Malawian mother carrying a child on her back&#8212;inspired from a photo taken in Ntcheu by my former professor, Steven King.</p>
                 <img class="dividing-line-desc" src="img/line-80x1.png">
-              </div><!--end ".description-container-absolute"-->
-            </div><!--end "#img-rainbow-button-match"-->
+              </div><!--end ".flex-column"-->
+          </div><!--end ".columns.flex-row"-->
+          </div><!--end ".row.flex-row"-->
+        <div class="row flex-row"><!----------RAISING THE SCORE ICON ROW ---------->
+          <div class="small-12 small-reset-order medium-6 medium-push-6 large-6 large-push-6 columns">
+            <div id="raising-the-score-logo" class="svg-logo-wrapper">
+                <object class="img-scale margin-auto border-box" type="image/svg+xml" data="img/raising-the-score-icon.svg">Your browser does not support SVG</object><!-----ADD PADDING ONLY AT SMALL SIZE----->
+            </div>
           </div><!--end ".columns"-->
-          </div><!--end ".row"-->
-        <div class="row"><!----------RAISING THE SCORE ICON ROW ---------->
-          <div class="small-12 medium-6 large-6 columns">
-            <div id="img-raising-the-score-icon-match" class="margin-auto">
-              <div class="description-container-absolute"><!--class="description-container-absolute"-->
+          <div class="small-12 small-reset-order medium-6 medium-pull-6 large-6 large-pull-6 columns flex-row">
+              <div class="flex-column"><!--class="description-container-absolute"-->
                 <p class="description-title">A Last Minute Improvement</p>
                 <p class="description-desc">CARE Malawi requested we change the name of the project to reflect their method of quantifying their work&#8212;the Scorecard. The new logo combined elements of the Malawian flag with the silhouette of the mother on the move&#8212;to symbolize the ongoing progress being made to improve maternal health care.</p>
                 <img class="dividing-line-desc" src="img/line-80x1.png">
-              </div>
-            </div>
-          </div><!--end ".columns"-->
-          <div class="small-12 medium-6 large-6 columns">
-            <object class="img-scale margin-auto border-box" type="image/svg+xml" data="img/raising-the-score-icon.svg">Your browser does not support SVG</object><!-----ADD PADDING ONLY AT SMALL SIZE----->
+              </div><!--end ".flex-container"-->
+          </div><!--end ".columns.flex-row"-->
+          </div><!--end ".row.flex-row"-->
+          <div class="feature-img-wrapper">
+              <img class="feature-img img-scale margin-auto" src="img/raising-the-score-style-guide-850x1788.png">
           </div>
-          </div><!--end ".row"-->
-          <img class="img-scale margin-auto" src="img/raising-the-score-style-guide-800x1683.png" style="border-bottom: 1px solid rgba(240, 240, 241, 0.90);">
       </div><!--end ".content-portfolio"-->
      <footer>
         <div id="footer-wrapper">
         <ul>
           <li><a href="https://www.linkedin.com/in/dulockwood" target="_blank"><!--<img src="img/icon-linkedin-30x120.png" alt="linkedin link">--><object type="image/svg+xml" data="img/icon-linkedin-1afaf2.svg">Your browser does not support SVG</object></a></li>
           <li><a href="https://twitter.com/dulockwood" target="_blank"><!--<img src="img/icon-twitter-30x120.png" alt="twitter link">--><object type="image/svg+xml" data="img/icon-twitter-1afaf2.svg">Your browser does not support SVG</object></a></li>
-          <li><a href="https://www.facebook.com/daniel.ulysses.lockwood" target="_blank"><!--<img src="img/icon-facebook-30x120.png" alt="facebook link">--><object type="image/svg+xml" data="img/icon-facebook-1afaf2.svg">Your browser does not support SVG</object></a></li>
+          <li><a href="https://github.com/dulockwood" target="_blank"><object type="image/svg+xml" data="img/icon-github-1afaf2.svg">Your browser does not support SVG</object></a></li>
           <li><img src="img/line-1x120.png"></li>
           <li><p id="call-to-action">Let's talk!</p><p id="email">dulockwood@gmail.com</p></li>
         </ul>

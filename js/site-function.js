@@ -6,7 +6,6 @@ $(document).ready(function() {
   //$("#nav-bar").delay(1400).animate({"opacity": "1"}, 500);
   //$("#content").delay(100).animate({"opacity": "1"}, 750);
   //$("div#banner ul li").animate({left: "-=50px"}, 500 );
- columnConform();
   
  var backgroundHeight = $(".scrolltop-intro").outerHeight(true)/1.3;
 
