@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daniel Ulysses Lockwood | Home</title>
-    <!--<link rel="stylesheet" href="css/foundation.css" />-->
-    <!--<link rel="stylesheet" href="css/normalize.css" /> (Commented out until I test it more; Apparently helps for IE8)-->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
@@ -37,8 +35,8 @@
         <div id="nav-wrapper">
         <a href="/"><div class="nav-bar-left">
           <ul>
-            <li><!--<img src="img/dulockwood-logo.svg" alt="logo">--><object type="image/svg+xml" data="img/logo.svg">Your browser does not support SVG</object></li>
-            <li><div id="name-title"></div><!--end "#name-title"--></li><!----------CHANGE OUT PNGS FOR SVGS AND DEFINE THEIR WIDTHS IN CSS FOR EACH MEDIA QUERY---------->
+            <li><object type="image/svg+xml" data="img/logo.svg"></object></li>
+            <li><div id="name-title"></div><!--end "#name-title"--></li>
           </ul>
         </div><!--end ".nav-bar-left"--></a>
         <div class="nav-bar-right">
@@ -111,7 +109,9 @@
             <div class="window">
               <p class="project-title">GROSSOLOGY EXHIBIT AND MOVIE POSTER</p>
               <p class="project-desc">Vector Graphics and Illustration | <span class="italicize">Morehead Planetarium</span></p>
-               <a href="grossology.html"><img class="img-scale" src="img/window-grossology.jpg" alt="Grossology And You"></a>
+               <a href="grossology.html">
+                <img class="img-scale" 
+                     src="img/window-grossology.jpg" alt="Grossology And You"></a><!--ADD SRCSET IMAGES YOU IDIOT-->
             </div>
           </div>
         </div><!--end ".row"-->
@@ -119,9 +119,9 @@
       <footer>
         <div id="footer-wrapper">
         <ul>
-          <li><a href="https://www.linkedin.com/in/dulockwood" target="_blank"><!--<img src="img/icon-linkedin-30x120.png" alt="linkedin link">--><object type="image/svg+xml" data="img/icon-linkedin-1afaf2.svg">Your browser does not support SVG</object></a></li>
-          <li><a href="https://twitter.com/dulockwood" target="_blank"><!--<img src="img/icon-twitter-30x120.png" alt="twitter link">--><object type="image/svg+xml" data="img/icon-twitter-1afaf2.svg">Your browser does not support SVG</object></a></li>
-          <li><a href="https://github.com/dulockwood" target="_blank"><object type="image/svg+xml" data="img/icon-github-1afaf2.svg">Your browser does not support SVG</object></a></li>
+          <li><a class="svg" href="https://www.linkedin.com/in/dulockwood" target="_blank"><object type="image/svg+xml" data="img/icon-linkedin-1afaf2.svg"><img src="img/icon-linkedin-1afaf2.png"></object></a></li>
+          <li><a class="svg" href="https://twitter.com/dulockwood" target="_blank"><object type="image/svg+xml" data="img/icon-twitter-1afaf2.svg"><img src="img/icon-twitter-1afaf2.png"></object></a></li>
+          <li><a class="svg" href="https://github.com/dulockwood" target="_blank"><object type="image/svg+xml" data="img/icon-github-1afaf2.svg"><img src="img/icon-github-1afaf2.png"></object></a></li>
           <li><img src="img/line-1x120.png"></li>
           <li><p id="call-to-action">Let's talk!</p><p id="email">dulockwood@gmail.com</p></li>
         </ul>

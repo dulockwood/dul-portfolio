@@ -1,10 +1,20 @@
-/*-----If you glance through my code, you might see that designed my site desktop-first, rather than mobile-first.
-For my site, which I assumed would most likely be viewed on a work computer, I felt this approach would be better.
-I recognize the importance of mobile-first responsive design in most other cases.-----*/
-
 a {
         text-decoration: none;
         color: #222222;
+}
+
+a.svg {
+        position: relative;
+        display: inline-block; 
+}
+
+a.svg:after {
+        content: ""; 
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left:0;
 }
 
 body {
@@ -13,6 +23,7 @@ body {
 }
 
 footer {
+        opacity: 0;
         background-color: #222222;
         margin-top: 40px;
 }
@@ -70,8 +81,7 @@ img[alt="What's keeping construction crews on the quad this year?"] {
 }
 
 nav {
-        /*background-color: rgba(248, 248, 249, 0.90);*//*-----For reverting from a transparency gradient background to a solid background-----*/
-                background: rgba(248, 248, 249, 0.90); /* For browsers that do not support gradients */
+        background: rgba(248, 248, 249, 0.90); /* For browsers that do not support gradients */
                 background: -webkit-linear-gradient(rgba(248, 248, 249, 0.9), rgba(248, 248, 249, 1));/* For Safari 5.1 to 6.0 */
                 background: -o-linear-gradient(rgba(248, 248, 249, 0.9), rgba(248, 248, 249, 1));/* For Opera 11.1 to 12.0 */
                 background: -moz-linear-gradient(rrgba(248, 248, 249, 0.9), rgba(248, 248, 249, 1));/* For Firefox 3.6 to 15 */
@@ -79,6 +89,7 @@ nav {
         border-bottom: 1px solid rgba(240, 240, 241, 0.90);
         color: #222222;
         height: 80px;
+        opacity: 0;
         position: fixed;
         top: 0; /*--Revert to 40px when bringing back the "SITE UNDER CONSTRUCTION" sign--*/
         width: 100%;
@@ -116,7 +127,6 @@ ul {
 #bernie-posters-cf-wrapper {
         position: relative;
         max-width: 525px;
-        border-bottom: 1px solid rgba(240, 240, 241, 0.90);
 }
 
 #bernie-posters-cf-wrapper > img {
@@ -198,10 +208,12 @@ ul {
 }
 
 .content {
+        opacity: 0;
         margin-top: 120px; /*--Revert to 140px when including "SITE UNDER CONSTRUCTION" sign--*/
 }
 
 .content-portfolio {
+        opacity: 0;
         margin-top: 60px;
         margin-right: auto;
         margin-bottom: 80px;
@@ -279,6 +291,68 @@ ul {
         padding-right: 45px;
 }
 
+@-webkit-keyframes flyers-cfFadeInOut {
+        0% {opacity:1;} 47.0588% {opacity:1;} 50% {opacity:0;} 97.0588% {opacity:0;} 100% {opacity:1;}
+}
+
+@-moz-keyframes flyers-cfFadeInOut {
+        0% {opacity:1;} 47.0588% {opacity:1;} 50% {opacity:0;} 97.0588% {opacity:0;} 100% {opacity:1;}
+}
+
+@-o-keyframes flyers-cfFadeInOut {
+        0% {opacity:1;} 47.0588% {opacity:1;} 50% {opacity:0;} 97.0588% {opacity:0;} 100% {opacity:1;}
+}
+
+@keyframes flyers-cfFadeInOut {
+        0% {opacity:1;} 47.0588% {opacity:1;} 50% {opacity:0;} 97.0588% {opacity:0;} 100% {opacity:1;}
+}
+
+#flyers-cf {
+        position: relative;
+        max-width: 555px;
+        margin: 0 auto;
+}
+
+#flyers-cf-wrapper {
+        position: relative;
+        max-width: 525px;
+}
+
+#flyers-cf-wrapper > img {
+        position: absolute;
+        left: 0;
+        max-width: 100%;
+        /*-----Browser compatibility for CSS transition-----*/
+                -webkit-animation-name: flyers-cfFadeInOut; -webkit-animation-timing-function: ease-in-out;
+                -webkit-animation-iteration-count: infinite; -webkit-animation-duration: 17s;
+                
+                -moz-animation-name: flyers-cfFadeInOut; -moz-animation-timing-function: ease-in-out;
+                -moz-animation-iteration-count: infinite; -moz-animation-duration: 17s;
+                
+                -o-animation-name: flyers-cfFadeInOut; -o-animation-timing-function: ease-in-out;
+                -o-animation-iteration-count: infinite; -o-animation-duration: 17s;
+                
+                animation-name: flyers-cfFadeInOut; animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite; animation-duration: 17s;
+}
+
+#flyers-cf-stabilize {
+        position: relative;
+        max-width: 525px;
+}
+
+#flyers-cf-stabilize img {
+        max-width: 100%;
+}
+
+#flyers-cf img:nth-of-type(1) {
+        -webkit-animation-delay: 8.5s; -moz-animation-delay: 8.5s; -o-animation-delay: 8.5s; animation-delay: 8.5s;
+}
+
+#flyers-cf img:nth-of-type(2) {
+        -webkit-animation-delay: 0s; -moz-animation-delay: 0s; -o-animation-delay: 0s; animation-delay: 0s;
+}
+
 #footer-wrapper {
         margin: 0 auto;
         width: 1170px;
@@ -293,8 +367,32 @@ ul {
         vertical-align: middle;
 }
 
+.gradient-border {
+  position: relative;
+  border-bottom: 2px solid rgba(180, 180, 181, 0.90);
+}
+.gradient-border:before, .gradient-border:after {
+  content: "";
+  position: absolute;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(rgba(180, 180, 181, 0.90)));
+  background-image: -webkit-linear-gradient(transparent, rgba(180, 180, 181, 0.90));
+  background-image: -moz-linear-gradient(transparent, rgba(180, 180, 181, 0.90));
+  background-image: -o-linear-gradient(transparent, rgba(180, 180, 181, 0.90));
+  background-image: linear-gradient(transparent, rgba(180, 180, 181, 0.90));
+  top: -1px;
+  bottom: -1px;
+  width: 1px;
+}
+.gradient-border:before {
+  left: -1px;
+}
+.gradient-border:after {
+  right: -1px;
+}
+
 #header-amazon {
-        background: url("../img/background-amazon-2048x480.png") #1afaf2 no-repeat top left fixed;
+        opacity: 0;
+        background: url("../img/background-amazon-2048x480.png") #222222 no-repeat top left fixed;
         background-size: 2048px;
         height: 480px;
         width: 100%;
@@ -303,7 +401,8 @@ ul {
 }
 
 #header-csfb {
-        background: url("../img/background-csfb-2048x480.jpg") #1afaf2 no-repeat top center fixed;
+        opacity: 0;
+        background: url("../img/background-csfb-2048x480.jpg") #222222 no-repeat top center fixed;
         background-size: 2048px;
         height: 480px;
         width: 100%;
@@ -312,7 +411,8 @@ ul {
 }
 
 #header-dth {
-        background: url("../img/background-steam-vents-2048x480.png") #1afaf2 no-repeat top center fixed;
+        opacity: 0;
+        background: url("../img/background-steam-vents-2048x480.png") #222222 no-repeat top center fixed;
         background-size: 2048px;
         height: 480px;
         width: 100%;
@@ -321,7 +421,8 @@ ul {
 }
 
 #header-grossology {
-        background: url("../img/background-grossology-2048x480.png") #1afaf2 no-repeat top center fixed;
+        opacity: 0;
+        background: url("../img/background-grossology-2048x480.png") #222222 no-repeat top center fixed;
         background-size: 2048px;
         height: 480px;
         width: 100%;
@@ -330,7 +431,8 @@ ul {
 }
 
 #header-raising-the-score {
-        background: url("../img/background-raising-the-score-2048x480.png") #1afaf2 no-repeat top center fixed;
+        opacity: 0;
+        background: url("../img/background-raising-the-score-2048x480.png") #222222 no-repeat top center fixed;
         background-size: 2048px;
         height: 480px;
         width: 100%;
@@ -339,7 +441,8 @@ ul {
 }
 
 #header-seuss {
-        background: url("../img/background-seuss-book-2048x480-alt.png") #1afaf2 no-repeat top center fixed;
+        opacity: 0;
+        background: url("../img/background-seuss-book-2048x480-alt.png") #222222 no-repeat top center fixed;
         background-size: 2048px;
         height: 480px;
         width: 100%;
@@ -415,8 +518,7 @@ ul {
 }
 
 .nav-bar-left #name-title {
-        /*content:url("../img/name-title-371x31.png");*//*-----For reverting back to PNG name titles-----*/
-                content:url("../img/name-title-danulylock.svg");
+        background: url("../img/name-title-danulylock.svg") no-repeat top center;
         margin-bottom: 12px; /*necessary to vertically center NAME TITLE. Can't alter position of containing <li>*/
         width: 371px;
         height: 31px;
@@ -602,7 +704,7 @@ ul {
 @media (max-width: 1169px) { 
         .nav-bar-left #name-title {
                 /*content:url("../img/name-title-371x31.png");*//*-----For reverting back to PNG name titles-----*/
-                        content:url("../img/name-title-danulylock.svg");
+                        background: url("../img/name-title-danulylock.svg")  no-repeat top center;
                 margin-bottom: 12px; /*necessary to vertically center NAME TITLE. Can't alter position of containing <li>*/
                 width: 371px;
                 height: 31px;
@@ -632,7 +734,7 @@ ul {
 @media (max-width: 839px) { 
         .nav-bar-left #name-title {
                 /*content:url("../img/name-title-262x31.png");*//*-----For reverting back to PNG name titles-----*/
-                        content:url("../img/name-title-danlock.svg");
+                        background: url("../img/name-title-danlock.svg") no-repeat top center;
                 margin-bottom: 12px; /*necessary to vertically center NAME TITLE. Can't alter position of containing <li>*/
                 width: 262px;
                 height: 31px;
@@ -710,8 +812,7 @@ ul {
                 height: 60px;
         }
         .nav-bar-left #name-title {
-                /*content:url("../img/name-title-150x31.png");*//*-----For reverting back to PNG name titles-----*/
-                        content:url("../img/name-title-danlock.svg");
+                background: url("../img/name-title-danlock.svg") no-repeat top center;
                 margin-bottom: 7px; /*necessary to vertically center NAME TITLE. Can't alter position of containing <li>*/
                 width: calc(262px * .75);
                 height: calc(31px * .75);
@@ -736,8 +837,7 @@ ul {
 
 @media (max-width: 629px) { 
         .nav-bar-left #name-title {
-                /*content:url("../img/name-title-150x31.png");*//*-----For reverting back to PNG name titles-----*/
-                        content:url("../img/name-title-lock.svg");
+                background: url("../img/name-title-lock.svg") no-repeat top center;
                 margin-bottom: 7px; /*necessary to vertically center NAME TITLE. Can't alter position of containing <li>*/
                 width: calc(150px * .75);
                 height: calc(31px * .75);
@@ -750,8 +850,7 @@ ul {
 
 @media (max-width: 539px) {
         .nav-bar-left #name-title {
-                /*content:url("../img/name-title-85x31.png");*//*-----For reverting back to PNG name titles-----*/
-                        content:url("../img/name-title-dul.svg");
+                background: url("../img/name-title-dul.svg") no-repeat top center;
                 margin-bottom: 7px; /*necessary to vertically center NAME TITLE. Can't alter position of containing <li>*/
                 width: calc(85px * .75);
                 height: calc(31px * .75);
@@ -771,8 +870,7 @@ ul {
                 font-size: 14px;
         }
         .nav-bar-left #name-title {
-                /*content:url("../img/name-title-85x31.png");*//*-----For reverting back to PNG name titles-----*/
-                        content:url("../img/name-title-dul.svg");
+                background: url("../img/name-title-dul.svg") no-repeat top center;
                 margin-bottom: 7px; /*necessary to vertically center NAME TITLE. Can't alter position of containing <li>*/
                 width: calc(85px * .75);
                 height: calc(31px * .75);
@@ -795,7 +893,7 @@ ul {
 @media (min-height: 481px) and (max-height: 700px) and (max-width: 480px) {/*-----1x-----*/
         /*---------------amazonair.html---------------*/
                 #header-amazon {
-                        background: url("../img/background-amazon-portrait-480x700.jpg") #1afaf2 no-repeat top center fixed;
+                        background: url("../img/background-amazon-portrait-480x700.jpg") #222222 no-repeat top center fixed;
                         background-size: 480px;
                         height: 700px;
                         width: 100%;
@@ -805,7 +903,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {/*-----2x-----*/
                         #header-amazon {
-                                background: url("../img/background-amazon-portrait-960x1400.jpg") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-amazon-portrait-960x1400.jpg") #222222 no-repeat top center fixed;
                                 background-size: 480px;
                                 height: 700px;
                                 z-index: -10;
@@ -813,7 +911,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {/*-----3x-----*/
                         #header-amazon {
-                                background: url("../img/background-amazon-portrait-1440x2100.jpg") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-amazon-portrait-1440x2100.jpg") #222222 no-repeat top center fixed;
                                 background-size: 480px;
                                 height: 700px;
                                 z-index: -10;
@@ -821,7 +919,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 3.5), (min-resolution: 336dpi) {/*-----3.5x-----*/
                         #header-amazon {
-                                background: url("../img/background-amazon-portrait-1680x2450.jpg") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-amazon-portrait-1680x2450.jpg") #222222 no-repeat top center fixed;
                                 background-size: 480px;
                                 height: 700px;
                                 z-index: -10;
@@ -829,7 +927,7 @@ ul {
                 }
         /*---------------csfb.html---------------*/
                 #header-csfb {
-                        background: url("../img/background-csfb-portrait-480x700.jpg") #1afaf2 no-repeat top center fixed;
+                        background: url("../img/background-csfb-portrait-480x700.jpg") #222222 no-repeat top center fixed;
                         background-size: 480px;
                         height: 700px;
                         width: 100%;
@@ -839,7 +937,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {/*-----2x-----*/
                         #header-csfb {
-                                background: url("../img/background-csfb-portrait-960x1400.jpg") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-csfb-portrait-960x1400.jpg") #222222 no-repeat top center fixed;
                                 background-size: 480px;
                                 height: 700px;
                                 z-index: -10;
@@ -847,7 +945,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {/*-----3x-----*/
                         #header-csfb {
-                                background: url("../img/background-csfb-portrait-1440x2100.jpg") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-csfb-portrait-1440x2100.jpg") #222222 no-repeat top center fixed;
                                 background-size: 480px;
                                 height: 700px;
                                 z-index: -10;
@@ -855,7 +953,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 3.5), (min-resolution: 336dpi) {/*-----3.5x-----*/
                         #header-csfb {
-                                background: url("../img/background-csfb-portrait-1680x2450.jpg") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-csfb-portrait-1680x2450.jpg") #222222 no-repeat top center fixed;
                                 background-size: 480px;
                                 height: 700px;
                                 z-index: -10;
@@ -863,7 +961,7 @@ ul {
                 }
         /*---------------dth.html---------------*/
                 #header-dth {
-                        background: url("../img/background-test-480x700.png") #1afaf2 no-repeat top center fixed;
+                        background: url("../img/background-dth-portrait-480x700.jpg") #222222 no-repeat top center fixed;
                         background-size: 480px;
                         height: 700px;
                         width: 100%;
@@ -873,7 +971,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {/*-----2x-----*/
                         #header-dth {
-                                background: url("../img/background-test-960x1400.png") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-dth-portrait-960x1400.jpg") #222222 no-repeat top center fixed;
                                 background-size: 480px;
                                 height: 700px;
                                 z-index: -10;
@@ -881,7 +979,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {/*-----3x-----*/
                         #header-dth {
-                                background: url("../img/background-test-1440x2100.png") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-dth-portrait-1440x2100.jpg") #222222 no-repeat top center fixed;
                                 background-size: 480px;
                                 height: 700px;
                                 z-index: -10;
@@ -889,7 +987,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 3.5), (min-resolution: 336dpi) {/*-----3.5x-----*/
                         #header-dth {
-                                background: url("../img/background-test-1680x2450.png") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-dth-portrait-1680x2450.jpg") #222222 no-repeat top center fixed;
                                 background-size: 480px;
                                 height: 700px;
                                 z-index: -10;
@@ -897,7 +995,7 @@ ul {
                 }
         /*---------------grossology.html---------------*/
                 #header-grossology {
-                        background: url("../img/background-test-landscape-700x480.png") #1afaf2 no-repeat top center fixed;
+                        background: url("../img/background-grossology-portrait-480x700.jpg") #222222 no-repeat top center fixed;
                         background-size: 480px;
                         height: 700px;
                         width: 100%;
@@ -907,7 +1005,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {/*-----2x-----*/
                         #header-grossology {
-                                background: url("../img/background-test-landscape-1400x960.png") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-grossology-portrait-960x1400.jpg") #222222 no-repeat top center fixed;
                                 background-size: 480px;
                                 height: 700px;
                                 z-index: -10;
@@ -915,7 +1013,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {/*-----3x-----*/
                         #header-grossology {
-                                background: url("../img/background-test-landscape-2100x1440.png") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-grossology-portrait-1440x2100.jpg") #222222 no-repeat top center fixed;
                                 background-size: 480px;
                                 height: 700px;
                                 z-index: -10;
@@ -923,7 +1021,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 3.5), (min-resolution: 336dpi) {/*-----3.5x-----*/
                         #header-grossology {
-                                background: url("../img/background-test-landscape-2450x1680.png") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-grossology-portrait-1680x2450.jpg") #222222 no-repeat top center fixed;
                                 background-size: 480px;
                                 height: 700px;
                                 z-index: -10;
@@ -931,7 +1029,7 @@ ul {
                 }
         /*---------------raising-the-score.html---------------*/
                 #header-raising-the-score {
-                        background: url("../img/background-raising-the-score-portrait-480x700.jpg") #1afaf2 no-repeat top center fixed;
+                        background: url("../img/background-raising-the-score-portrait-480x700.jpg") #222222 no-repeat top center fixed;
                         background-size: 480px;
                         height: 700px;
                         width: 100%;
@@ -941,7 +1039,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {/*-----2x-----*/
                         #header-raising-the-score {
-                                background: url("../img/background-raising-the-score-portrait-960x1400.jpg") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-raising-the-score-portrait-960x1400.jpg") #222222 no-repeat top center fixed;
                                 background-size: 480px;
                                 height: 700px;
                                 z-index: -10;
@@ -949,7 +1047,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {/*-----3x-----*/
                         #header-raising-the-score {
-                                background: url("../img/background-raising-the-score-portrait-1440x2100.jpg") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-raising-the-score-portrait-1440x2100.jpg") #222222 no-repeat top center fixed;
                                 background-size: 480px;
                                 height: 700px;
                                 z-index: -10;
@@ -957,7 +1055,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 3.5), (min-resolution: 336dpi) {/*-----3.5x-----*/
                         #header-raising-the-score {
-                                background: url("../img/background-raising-the-score-portrait-1680x2450.jpg") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-raising-the-score-portrait-1680x2450.jpg") #222222 no-repeat top center fixed;
                                 background-size: 480px;
                                 height: 700px;
                                 z-index: -10;
@@ -965,7 +1063,7 @@ ul {
                 }
         /*---------------redstatebluestate.html---------------*/
                 #header-seuss {
-                        background: url("../img/background-seuss-portrait-480x700.jpg") #1afaf2 no-repeat top center fixed;
+                        background: url("../img/background-seuss-portrait-480x700.jpg") #222222 no-repeat top center fixed;
                         background-size: 480px;
                         height: 700px;
                         width: 100%;
@@ -975,7 +1073,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {/*-----2x-----*/
                         #header-seuss {
-                                background: url("../img/background-seuss-portrait-960x1400.jpg") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-seuss-portrait-960x1400.jpg") #222222 no-repeat top center fixed;
                                 background-size: 480px;
                                 height: 700px;
                                 z-index: -10;
@@ -983,7 +1081,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {/*-----3x-----*/
                         #header-seuss {
-                                background: url("../img/background-seuss-portrait-1440x2100.jpg") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-seuss-portrait-1440x2100.jpg") #222222 no-repeat top center fixed;
                                 background-size: 480px;
                                 height: 700px;
                                 z-index: -10;
@@ -991,7 +1089,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 3.5), (min-resolution: 336dpi) {/*-----3.5x-----*/
                         #header-seuss {
-                                background: url("../img/background-seuss-portrait-1680x2450.jpg") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-seuss-portrait-1680x2450.jpg") #222222 no-repeat top center fixed;
                                 background-size: 480px;
                                 height: 700px;
                                 z-index: -10;
@@ -1003,7 +1101,7 @@ ul {
 @media (max-height: 480px) and (max-width: 700px) {/*-----1x-----*/
         /*---------------amazonair.html---------------*/
                 #header-amazon {
-                        background: url("../img/background-amazon-landscape-700x480.jpg") #1afaf2 no-repeat top center fixed;
+                        background: url("../img/background-amazon-landscape-700x480.jpg") #222222 no-repeat top center fixed;
                         background-size: 700px;
                         height: 480px;
                         width: 100%;
@@ -1013,7 +1111,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {/*-----2x-----*/
                         #header-amazon {
-                                background: url("../img/background-amazon-landscape-1400x960.jpg") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-amazon-landscape-1400x960.jpg") #222222 no-repeat top center fixed;
                                 background-size: 700px;
                                 height: 480px;
                                 z-index: -10;
@@ -1021,7 +1119,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {/*-----3x-----*/
                         #header-amazon {
-                                background: url("../img/background-amazon-landscape-2100x1440.jpg") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-amazon-landscape-2100x1440.jpg") #222222 no-repeat top center fixed;
                                 background-size: 700px;
                                 height: 480px;
                                 z-index: -10;
@@ -1029,7 +1127,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 3.5), (min-resolution: 336dpi) {/*-----3.5x-----*/
                         #header-amazon {
-                                background: url("../img/background-amazon-landscape-2450x1680.jpg") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-amazon-landscape-2450x1680.jpg") #222222 no-repeat top center fixed;
                                 background-size: 700px;
                                 height: 480px;
                                 z-index: -10;
@@ -1037,7 +1135,7 @@ ul {
                 }
         /*---------------csfb.html---------------*/
                 #header-csfb {
-                        background: url("../img/background-csfb-landscape-700x480.jpg") #1afaf2 no-repeat top center fixed;
+                        background: url("../img/background-csfb-landscape-700x480.jpg") #222222 no-repeat top center fixed;
                         background-size: 700px;
                         height: 480px;
                         width: 100%;
@@ -1047,7 +1145,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {/*-----2x-----*/
                         #header-csfb {
-                                background: url("../img/background-csfb-landscape-1400x960.jpg") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-csfb-landscape-1400x960.jpg") #222222 no-repeat top center fixed;
                                 background-size: 700px;
                                 height: 480px;
                                 z-index: -10;
@@ -1055,7 +1153,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {/*-----3x-----*/
                         #header-csfb {
-                                background: url("../img/background-csfb-landscape-2100x1440.jpg") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-csfb-landscape-2100x1440.jpg") #222222 no-repeat top center fixed;
                                 background-size: 700px;
                                 height: 480px;
                                 z-index: -10;
@@ -1063,7 +1161,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 3.5), (min-resolution: 336dpi) {/*-----3.5x-----*/
                         #header-csfb {
-                                background: url("../img/background-csfb-landscape-2450x1680.jpg") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-csfb-landscape-2450x1680.jpg") #222222 no-repeat top center fixed;
                                 background-size: 700px;
                                 height: 480px;
                                 z-index: -10;
@@ -1071,7 +1169,7 @@ ul {
                 }
         /*---------------dth.html---------------*/
                 #header-dth {
-                       background: url("../img/background-test-landscape-700x480.png") #1afaf2 no-repeat top center fixed;
+                       background: url("../img/background-dth-landscape-700x480.jpg") #222222 no-repeat top center fixed;
                        background-size: 700px;
                        height: 480px;
                        width: 100%;
@@ -1081,7 +1179,7 @@ ul {
                 }       
                 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {/*-----2x-----*/
                         #header-dth {
-                                background: url("../img/background-test-landscape-1400x960.png") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-dth-landscape-1400x960.jpg") #222222 no-repeat top center fixed;
                                 background-size: 700px;
                                 height: 480px;
                                 z-index: -10;
@@ -1089,7 +1187,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {/*-----3x-----*/
                         #header-dth {
-                                background: url("../img/background-test-landscape-2100x1440.png") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-dth-landscape-2100x1440.jpg") #222222 no-repeat top center fixed;
                                 background-size: 700px;
                                 height: 480px;
                                 z-index: -10;
@@ -1097,7 +1195,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 3.5), (min-resolution: 336dpi) {/*-----3.5x-----*/
                         #header-dth {
-                                background: url("../img/background-test-landscape-2450x1680.png") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-dth-landscape-2450x1680.jpg") #222222 no-repeat top center fixed;
                                 background-size: 700px;
                                 height: 480px;
                                 z-index: -10;
@@ -1105,7 +1203,7 @@ ul {
                 }
         /*---------------grossology.html---------------*/
                 #header-grossology {
-                        background: url("../img/background-test-landscape-700x480.png") #1afaf2 no-repeat top center fixed;
+                        background: url("../img/background-grossology-landscape-700x480.jpg") #222222 no-repeat top center fixed;
                         background-size: 700px;
                         height: 480px;
                         width: 100%;
@@ -1115,7 +1213,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {/*-----2x-----*/
                         #header-grossology {
-                                background: url("../img/background-test-landscape-1400x960.png") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-grossology-landscape-1400x960.jpg") #222222 no-repeat top center fixed;
                                 background-size: 700px;
                                 height: 480px;
                                 z-index: -10;
@@ -1123,7 +1221,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {/*-----3x-----*/
                         #header-grossology {
-                                background: url("../img/background-test-landscape-2100x1440.png") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-grossology-landscape-2100x1440.jpg") #222222 no-repeat top center fixed;
                                 background-size: 700px;
                                 height: 480px;
                                 z-index: -10;
@@ -1131,7 +1229,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 3.5), (min-resolution: 336dpi) {/*-----3.5x-----*/
                         #header-grossology {
-                                background: url("../img/background-test-landscape-2450x1680.png") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-grossology-landscape-2450x1680.jpg") #222222 no-repeat top center fixed;
                                 background-size: 700px;
                                 height: 480px;
                                 z-index: -10;
@@ -1139,7 +1237,7 @@ ul {
                 }
         /*---------------raising-the-score.html---------------*/
                 #header-raising-the-score {
-                        background: url("../img/background-raising-the-score-landscape-700x480.jpg") #1afaf2 no-repeat top center fixed;
+                        background: url("../img/background-raising-the-score-landscape-700x480.jpg") #222222 no-repeat top center fixed;
                         background-size: 700px;
                         height: 480px;
                         width: 100%;
@@ -1149,7 +1247,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {/*-----2x-----*/
                         #header-raising-the-score {
-                                background: url("../img/background-raising-the-score-landscape-1400x960.jpg") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-raising-the-score-landscape-1400x960.jpg") #222222 no-repeat top center fixed;
                                 background-size: 700px;
                                 height: 480px;
                                 z-index: -10;
@@ -1157,7 +1255,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {/*-----3x-----*/
                         #header-raising-the-score {
-                                background: url("../img/background-raising-the-score-landscape-2100x1440.jpg") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-raising-the-score-landscape-2100x1440.jpg") #222222 no-repeat top center fixed;
                                 background-size: 700px;
                                 height: 480px;
                                 z-index: -10;
@@ -1165,7 +1263,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 3.5), (min-resolution: 336dpi) {/*-----3.5x-----*/
                         #header-raising-the-score {
-                                background: url("../img/background-raising-the-score-landscape-2450x1680.jpg") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-raising-the-score-landscape-2450x1680.jpg") #222222 no-repeat top center fixed;
                                 background-size: 700px;
                                 height: 480px;
                                 z-index: -10;
@@ -1173,7 +1271,7 @@ ul {
                 }
         /*---------------redstatebluestate.html---------------*/
                 #header-seuss {
-                        background: url("../img/background-seuss-landscape-700x480.jpg") #1afaf2 no-repeat top center fixed;
+                        background: url("../img/background-seuss-landscape-700x480.jpg") #222222 no-repeat top center fixed;
                         background-size: 700px;
                         height: 480px;
                         width: 100%;
@@ -1183,7 +1281,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {/*-----2x-----*/
                         #header-seuss {
-                                background: url("../img/background-seuss-landscape-1400x960.jpg") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-seuss-landscape-1400x960.jpg") #222222 no-repeat top center fixed;
                                 background-size: 700px;
                                 height: 480px;
                                 z-index: -10;
@@ -1191,7 +1289,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {/*-----3x-----*/
                         #header-seuss {
-                                background: url("../img/background-seuss-landscape-2100x1440.jpg") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-seuss-landscape-2100x1440.jpg") #222222 no-repeat top center fixed;
                                 background-size: 700px;
                                 height: 480px;
                                 z-index: -10;
@@ -1199,7 +1297,7 @@ ul {
                 }
                 @media (-webkit-min-device-pixel-ratio: 3.5), (min-resolution: 336dpi) {/*-----3.5x-----*/
                         #header-seuss {
-                                background: url("../img/background-seuss-landscape-2450x1680.jpg") #1afaf2 no-repeat top center fixed;
+                                background: url("../img/background-seuss-landscape-2450x1680.jpg") #222222 no-repeat top center fixed;
                                 background-size: 700px;
                                 height: 480px;
                                 z-index: -10;
@@ -1233,45 +1331,65 @@ ul {
 /*-------------------------------------------------------FOUNDATION CLASS INFRASTRUCTURE-------------------------------------------------------*/
 
 .row {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  max-width: 1170px; }
-  .row:before, .row:after {
-    content: " ";
-    display: table; }
-  .row:after {
-    clear: both; }
-  .row.collapse > .column,
-  .row.collapse > .columns {
-    padding-left: 0;
-    padding-right: 0; }
-  .row.collapse .row {
-    margin-left: 0;
-    margin-right: 0; }
-  .row .row {
-    width: auto;
-    margin-left: -0.9375rem;
-    margin-right: -0.9375rem;
-    margin-top: 0;
-    margin-bottom: 0;
-    max-width: none; }
-    .row .row:before, .row .row:after {
-      content: " ";
-      display: table; }
-    .row .row:after {
-      clear: both; }
-    .row .row.collapse {
-      width: auto;
-      margin: 0;
-      max-width: none; }
-      .row .row.collapse:before, .row .row.collapse:after {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        max-width: 1170px;
+}
+
+.row:before, .row:after {
         content: " ";
-        display: table; }
-      .row .row.collapse:after {
-        clear: both; }
+        display: table;
+}
+
+.row:after {
+        clear: both;
+}
+
+.row.collapse > .column,
+.row.collapse > .columns {
+        padding-left: 0;
+        padding-right: 0;
+}
+
+.row.collapse .row {
+        margin-left: 0;
+        margin-right: 0;
+}
+
+.row .row {
+        width: auto;
+        margin-left: -0.9375rem;
+        margin-right: -0.9375rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        max-width: none;
+}
+
+.row .row:before, .row .row:after {
+        content: " ";
+        display: table;
+}
+
+.row .row:after {
+        clear: both;
+}
+
+.row .row.collapse {
+        width: auto;
+        margin: 0;
+        max-width: none;
+}
+
+.row .row.collapse:before, .row .row.collapse:after {
+        content: " ";
+        display: table;
+}
+.row .row.collapse:after {
+        clear: both;
+}
 
 .column,
 .columns {

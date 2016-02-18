@@ -1,11 +1,14 @@
+
 $(window).resize(function() {
 
 });
 
 $(document).ready(function() {
-  //$("#nav-bar").delay(1400).animate({"opacity": "1"}, 500);
-  //$("#content").delay(100).animate({"opacity": "1"}, 750);
-  //$("div#banner ul li").animate({left: "-=50px"}, 500 );
+  $("nav").delay(500).animate({"opacity": "1"}, 500);
+  $(".content").delay(1000).animate({"opacity": "1"}, 500);
+  $("[id*='header-']").delay(1000).animate({"opacity": "1"}, 500);
+  $(".content-portfolio").delay(1000).animate({"opacity": "1"}, 500);
+  $("footer").delay(500).animate({"opacity": "1"}, 500);
   
  var backgroundHeight = $(".scrolltop-intro").outerHeight(true)/1.3;
 
